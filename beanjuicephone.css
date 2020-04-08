@@ -459,7 +459,7 @@ p{
         font-size:14px;
     }
     
-    footer li:hover{
+    footer li:hover, footer li:focus, footer li:active{
         text-decoration: dotted underline white;
         color:white;
         cursor:pointer;
