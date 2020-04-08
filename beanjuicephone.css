@@ -51,6 +51,11 @@ nav ol:active{
     background-color:#444;
 }
 
+nav ol:focus{
+    height:300px;
+    background-color:#444;
+}
+
 nav li{
     padding:16px 1px 16px 1px;
     width:100%;
@@ -65,6 +70,11 @@ nav li:hover{
 }
 
 nav li:active{
+    cursor:pointer;
+    background-color:#555;
+}
+
+nav li:focus{
     cursor:pointer;
     background-color:#555;
 }
