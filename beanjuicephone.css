@@ -42,12 +42,12 @@ nav ol{
 }
 
 nav ol:hover{
-    height:auto;
+    height:300px;
     background-color:#444;
 }
 
 nav ol:active{
-    height:auto;
+    height:300px;
     background-color:#444;
 }
 
