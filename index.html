@@ -1,0 +1,151 @@
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="beanjuicedesk.css" rel="stylesheet" media="screen and (min-width:880px)"/>
+    <link href="beanjuicephone.css" rel="stylesheet" media="screen and (max-width:880px)"/>
+    <script src="beanjuice.js"></script>
+</head>
+<body>
+    <nav>                                                                        <!-- NavBar Start -->
+        <img src="logo-01.png" id="navlogo">
+        <img src="hamburger-02.png" onclick="navchange()" id="hamburger">
+        <div id="navmid">
+            <ol>
+                <li class="navhead">Products</li>
+                <div class="hidden">
+                    <li class="navselect">Bean Juice</li>
+                    <li class="navselect">Bean Spray</li>
+                    <li class="navselect">Bean Soap</li>
+                </div>
+            </ol>
+            <ol>
+                <li class="navhead">About</li>
+                <div class="hidden">
+                    <li class="navselect">About Company</li>
+                    <li class="navselect">About Products</li>
+                </div>
+            </ol>
+            <ol>
+                <li class="navhead">Fun</li>
+                <div class="hidden">
+                    <li class="navselect">Social Page</li>
+                    <li class="navselect">Videos</li>
+                    <li class="navselect">Photo Sharing</li>
+                </div>
+            </ol>
+        </div>
+
+    </nav>                                                                       <!-- NavBar End -->
+    <main>
+    <header>                                                                     <!--section 1-->
+        <h2 class="headtext">Scent Yourself</h2>                                   
+        <section>
+            <img id="right" onclick="sprayright()" src="arrowright-03.png"/>
+            <img id="left" onclick="sprayleft()" src="arrowleft-03-03.png"/>
+        </section>
+        <div class="displayimg">
+            <div id="slide">
+                <img src="redcanweb.png" class="sprayimg" />
+                <img src="yellowcanweb.png" class="sprayimg" />
+                <img src="bluecanweb.png" class="sprayimg" />
+            </div>
+        </div>
+    </header>
+    <article id="quizquestion">                                                  <!--quiz box-->    
+        <div id="quizquestionbox"><h3>What's <br> Your <br> Smell?</h3>
+            <button>Quiz</button>
+        </div>
+        <img id="quizphoto" src="magicspray.png"/>
+    </article>
+        <h3 id="shoptext">Shop the Collection</h3>
+    <div id="moveholder">
+        <img class="left" onclick="slideleft()" src="arrowleft-03-03.png"/>
+    <article id="shop">                                                          <!--item sale showcase-->
+            
+        <div id="shopview">
+        <div class="item redbg">
+            <h5>Speed Demon</h5>
+            <h6>Bean Juice</h6>
+            <img class="shopspray" src="redcanweb.png"/>
+            <p>$12.99</p>
+        </div>
+        <div class="item yellowbg">
+            <h5>Ray of Sunshine</h5>
+            <h6>Bean Juice</h6>
+            <img class="shopspray" src="yellowcanweb.png"/>
+            <p>$12.99</p>
+        </div>
+        <div class="item bluebg">
+            <h5>Icy Icicles</h5>
+            <h6>Bean Juice</h6>
+            <img class="shopspray" src="bluecanweb.png"/>
+            <p>$12.99</p>
+        </div>
+        <div class="item redbg">
+            <h5>Speed Demon</h5>
+            <h6>Bean Juice</h6>
+            <img class="shopspray" src="redcanweb.png"/>
+            <p>$12.99</p>
+        </div>
+        <div class="item yellowbg">
+            <h5>Ray of Sunshine</h5>
+            <h6>Bean Juice</h6>
+            <img class="shopspray" src="yellowcanweb.png"/>
+            <p>$12.99</p>
+        </div>
+        <div class="item bluebg">
+            <h5>Speed Demon</h5>
+            <h6>Bean Juice</h6>
+            <img class="shopspray" src="bluecanweb.png"/>
+            <p>$12.99</p>
+        </div>
+    </div>
+    
+    </article>
+    <img class="right" src="arrowright-03.png" onclick="slideright()"/>
+</div>
+    <article id="actions">                                                       <!--buynow and email link-->
+        <div id="buynow">
+            <button>Buy Now</button>
+        </div>
+        <div id="email">
+            <button>Email <br> Sign Up</button>
+        </div>
+    </article>
+    </main>
+    <footer>
+        <ol>
+            <li class="toplist">Products</li>
+            <li>Bean Juice</li>
+            <li>Bean Spray</li>
+            <li>Bean Soap</li>
+            <li>Speed Demon</li>
+            <li>Ray of Sunshine</li>
+            <li>Icy Icicles</li>
+        </ol>
+        <ol>
+            <li class="toplist">Fun</li>
+            <li>Video Page</li>
+            <li>Photo Sharing</li>
+            <li>Bean Game</li>
+        </ol>
+        <ol>
+            <li class="toplist">Social Media</li>
+            <li>Youtube</li>
+            <li>Instagram</li>
+            <li>Facebook</li>
+            <li>Snapchat</li>
+            <li>VSCO</li>
+            <li>Twitter</li>
+        </ol>
+        <ol>
+            <li class="toplist">Corporate</li>
+            <li>About Product</li>
+            <li>About Company</li>
+            <li>Careers</li>
+            <li>Terms</li>
+            <li>Policy</li>
+        </ol>
+    </footer>
+    <p id="copyright">Copyright © 2020 BeanJuice Inc. All rights reserved.</p>
+
+</body>
