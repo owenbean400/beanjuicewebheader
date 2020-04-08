@@ -42,7 +42,7 @@ nav ol{
 }
 
 nav ol:hover, nav ol:focus, nav ol:active{
-    height:300px;
+    height:auto;
     background-color:#444;
 }
 
