@@ -3,6 +3,7 @@
     <link href="beanjuicedesk.css" rel="stylesheet" media="screen and (min-width:880px)"/>
     <link href="beanjuicephone.css" rel="stylesheet" media="screen and (max-width:880px)"/>
     <script src="beanjuice.js"></script>
+    <script src="beanmaster.js"></script>
 	<link rel="shortcut icon" href="ogblogo/favicon.ico" type="image/x-icon" />
     <link rel="apple-touch-icon" href="ogblogo/apple-touch-icon.png" />
     <link rel="apple-touch-icon" sizes="57x57" href="ogblogo/apple-touch-icon-57x57.png" />
@@ -17,15 +18,15 @@
 </head>
 <body>
     <nav>                                                                        <!-- NavBar Start -->
-        <img src="logo-01.png" id="navlogo">
-        <img src="hamburger-02.png" onclick="navchange()" id="hamburger">
+        <a href="index.html"><img src="photo/logo-01.png" id="navlogo"></a>
+        <img src="photo/hamburger-02.png" id="hamburger">
         <div id="navmid">
             <ol aria-haspopup="true" role="button" tabIndex="0">
                 <li class="navhead">Products</li>
                 <div class="hidden">
-                    <li class="navselect">Bean Juice</li>
-                    <li class="navselect">Bean Spray</li>
-                    <li class="navselect">Bean Soap</li>
+                    <a href="speeddemon.html"><li class="navselect">Speed Demon</li></a>
+                    <li class="navselect">Sunshine</li>
+                    <li class="navselect">Icicles</li>
                 </div>
             </ol>
             <ol aria-haspopup="true" role="button" tabIndex="0">
@@ -50,14 +51,14 @@
     <header>                                                                     <!--section 1-->
         <h2 class="headtext">Scent Yourself</h2>                                   
         <section>
-            <img id="right" onclick="sprayright()" src="arrowright-03.png"/>
-            <img id="left" onclick="sprayleft()" src="arrowleft-03-03.png"/>
+            <img id="right" onclick="sprayright()" src="photo/arrowright-03.png"/>
+            <img id="left" onclick="sprayleft()" src="photo/arrowleft-03-03.png"/>
         </section>
         <div class="displayimg">
             <div id="slide">
-                <img src="redcanweb.png" class="sprayimg" />
-                <img src="yellowcanweb.png" class="sprayimg" />
-                <img src="bluecanweb.png" class="sprayimg" />
+                <a href="speeddemon.html"><img src="photo/redcanweb.png" class="sprayimg" /></a>
+                <img src="photo/yellowcanweb.png" class="sprayimg" />
+                <img src="photo/bluecanweb.png" class="sprayimg" />
             </div>
         </div>
     </header>
@@ -65,54 +66,54 @@
         <div id="quizquestionbox"><h3>What's <br> Your <br> Smell?</h3>
             <button>Quiz</button>
         </div>
-        <img id="quizphoto" src="magicspray.png"/>
+        <img id="quizphoto" src="photo/magicspray.png"/>
     </article>
         <h3 id="shoptext">Shop the Collection</h3>
     <div id="moveholder">
-        <img class="left" onclick="slideleft()" src="arrowleft-03-03.png"/>
+        <img class="left" onclick="slideleft()" src="photo/arrowleft-03-03.png"/>
     <article id="shop">                                                          <!--item sale showcase-->
             
         <div id="shopview">
-        <div class="item redbg">
+        <a href="speeddemon.html"><div class="item redbg" onclick="redPage()">
             <h5>Speed Demon</h5>
             <h6>Bean Juice</h6>
-            <img class="shopspray" src="redcanweb.png"/>
+            <img class="shopspray" src="photo/redcanweb.png"/>
             <p>$12.99</p>
-        </div>
-        <div class="item yellowbg">
+        </div></a>
+        <div class="item yellowbg" onclick="yellowPage()">
             <h5>Ray of Sunshine</h5>
             <h6>Bean Juice</h6>
-            <img class="shopspray" src="yellowcanweb.png"/>
+            <img class="shopspray" src="photo/yellowcanweb.png"/>
             <p>$12.99</p>
         </div>
-        <div class="item bluebg">
+        <div class="item bluebg" onclick="bluePage()">
             <h5>Icy Icicles</h5>
             <h6>Bean Juice</h6>
-            <img class="shopspray" src="bluecanweb.png"/>
+            <img class="shopspray" src="photo/bluecanweb.png"/>
             <p>$12.99</p>
         </div>
         <div class="item redbg">
             <h5>Speed Demon</h5>
             <h6>Bean Juice</h6>
-            <img class="shopspray" src="redcanweb.png"/>
+            <img class="shopspray" src="photo/redcanweb.png"/>
             <p>$12.99</p>
         </div>
         <div class="item yellowbg">
             <h5>Ray of Sunshine</h5>
             <h6>Bean Juice</h6>
-            <img class="shopspray" src="yellowcanweb.png"/>
+            <img class="shopspray" src="photo/yellowcanweb.png"/>
             <p>$12.99</p>
         </div>
         <div class="item bluebg">
             <h5>Speed Demon</h5>
             <h6>Bean Juice</h6>
-            <img class="shopspray" src="bluecanweb.png"/>
+            <img class="shopspray" src="photo/bluecanweb.png"/>
             <p>$12.99</p>
         </div>
     </div>
     
     </article>
-    <img class="right" src="arrowright-03.png" onclick="slideright()"/>
+    <img class="right" src="photo/arrowright-03.png" onclick="slideright()"/>
 </div>
     <article id="actions">                                                       <!--buynow and email link-->
         <div id="buynow">

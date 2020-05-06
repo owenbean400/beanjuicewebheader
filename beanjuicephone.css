@@ -21,6 +21,7 @@ nav{
     z-index:1;
 }
 
+
 #navmid{
     width:100%;
     clear:both;
@@ -50,8 +51,10 @@ nav li{
     padding:16px 1px 16px 1px;
     width:100%;
     list-style-type: none;
-    text-decoration: none;
     text-align:center;
+    font-size:18px;
+    text-decoration: none;
+    color:white;
 }
 
 nav li:hover, nav li:focus, nav li:active{
@@ -84,7 +87,7 @@ nav li:hover, nav li:focus, nav li:active{
 }
 
 section{
-    background-image: url("background.jpg");
+    background-image: url("photo/background.jpg");
     background-position:center;
     height:400px;
     width:100%;
@@ -334,14 +337,14 @@ section button{
 #buynow{
     width:400px;
     height:300px;
-    background-image: url("colorsmoke.png");
+    background-image: url("photo/colorsmoke.png");
     background-size: 100% 100%;
 }
 
 #email{
     width:400px;
     height:300px;
-    background-image: url("colorsmoke.png");
+    background-image: url("photo/colorsmoke.png");
     background-size: 100% 100%;
 }
 #actions button{
@@ -370,14 +373,14 @@ section button{
     #buynow{
         width:250px;
         height:200px;
-        background-image: url("colorsmoke.png");
+        background-image: url("photo/colorsmoke.png");
         background-size: 100% 100%;
     }
     
     #email{
         width:250px;
         height:200px;
-        background-image: url("colorsmoke.png");
+        background-image: url("photo/colorsmoke.png");
         background-size: 100% 100%;
     }
     #actions button{

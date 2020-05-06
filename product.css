@@ -1,0 +1,561 @@
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  background-color: #eeeeee;
+  font-family: helvetica, Arial, sans-serif;
+}
+@media only screen and (max-width: 768px) {
+  body nav {
+    background-color: #232323;
+    width: 100%;
+    height: 64px;
+    color: #eee;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+  }
+  body nav #navlogo {
+    width: 80px;
+    float: left;
+    padding: 4px 10px 0 10px;
+  }
+  body nav #hamburger {
+    float: right;
+    height: 48;
+    padding: 8px 9px 0 0;
+  }
+  body nav #hamburger:hover {
+    cursor: pointer;
+  }
+  body nav #navmid {
+    width: 100%;
+    clear: both;
+    display: none;
+  }
+  body nav #navmid ol {
+    background-color: #333;
+    display: block;
+    list-style-type: none;
+    text-decoration: none;
+    height: 50px;
+    overflow: hidden;
+    width: 33.3333%;
+    padding: 0 0 0 0;
+    margin: 8px 0 0 0;
+    float: left;
+    text-align: center;
+  }
+  body nav #navmid ol:hover {
+    height: auto;
+    background-color: #444;
+  }
+  body nav #navmid ol:focus {
+    height: auto;
+    background-color: #444;
+  }
+  body nav #navmid ol:active {
+    height: auto;
+    background-color: #444;
+  }
+  body nav #navmid ol li {
+    padding: 16px 1px 16px 1px;
+    width: 100%;
+    list-style-type: none;
+    text-decoration: none;
+    text-align: center;
+    font-size: 16px;
+    list-style-type: none;
+    color: white;
+  }
+  body nav #navmid ol li:hover {
+    cursor: pointer;
+    background-color: #555;
+  }
+  body nav #navmid ol li:focus {
+    cursor: pointer;
+    background-color: #555;
+  }
+  body nav #navmid ol li:active {
+    cursor: pointer;
+    background-color: #555;
+  }
+}
+@media only screen and (min-width: 768px) {
+  body nav {
+    background-color: #232323;
+    width: 100%;
+    height: 64px;
+    color: #eee;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+  }
+  body nav #navlogo {
+    width: 80px;
+    float: left;
+    padding: 4px 10px 0 10px;
+    cursor: alias;
+  }
+  body nav #hamburger {
+    float: right;
+    height: 48;
+    padding: 8px 9px 0 0;
+    display: none;
+  }
+  body nav #navmid {
+    width: 570px;
+    margin: auto;
+  }
+  body nav #navmid ol {
+    width: 190px;
+    float: left;
+    text-decoration: none;
+    list-style-type: none;
+    height: 50px;
+    overflow: hidden;
+    padding: 2px 0px 0px 0px;
+    margin: -5px 0px 5px 0px;
+    text-align: center;
+  }
+  body nav #navmid ol:hover {
+    height: auto;
+    background-color: #333;
+    overflow: visible;
+  }
+  body nav #navmid ol .hidden {
+    overflow: hidden;
+  }
+  body nav #navmid ol li {
+    padding: 21px 5px 18px 5px;
+    font-size: 24px;
+    list-style-type: none;
+    color: white;
+  }
+  body nav #navmid ol li:hover {
+    cursor: pointer;
+    background-color: #444;
+  }
+  body nav #navmid ol li:active {
+    background-color: #555;
+  }
+}
+body main {
+  margin: 64px 0 0 0;
+}
+@media only screen and (min-width: 992px) {
+  body main .container {
+    display: grid;
+    grid-template-columns: 600px auto;
+    grid-template-rows: auto;
+    justify-content: center;
+    grid-gap: 2%;
+  }
+  body main .container .containerleft {
+    width: 600px;
+    float: left;
+    display: grid;
+    grid-template-columns: 500px;
+    grid-template-rows: 300px 100px;
+    grid-gap: 32px;
+    justify-content: center;
+    margin: 64px 0;
+  }
+  body main .container .containerleft #displayimg {
+    background-color: #555;
+    height: 300px;
+    width: 500px;
+  }
+  body main .container .containerleft .imgcontainer {
+    width: 500px;
+    display: grid;
+    grid-template-columns: 50px 50px 50px 50px 50px;
+    grid-template-rows: 50px;
+    grid-gap: 16px;
+    justify-content: space-between;
+    align-items: center;
+  }
+  body main .container .containerleft .imgcontainer .imgslide {
+    background-color: #555;
+    height: 30px;
+    width: 50px;
+    cursor: pointer;
+  }
+  body main .container .containerleft .imgcontainer .imgslide:hover {
+    border-bottom: solid 2px #232323;
+  }
+  body main .container .containerright {
+    width: 100%;
+    float: left;
+    margin: 32px 0;
+  }
+  body main .container .containerright h1 {
+    font-size: 48px;
+    margin: 32px 0 0 0;
+  }
+  body main .container .containerright h3 {
+    font-size: 24px;
+    margin: 16px 0 0 0;
+  }
+  body main .container .containerright p {
+    font-size: 16px;
+    margin: 32px 20% 0 0;
+  }
+  body main .container .containerright button {
+    margin: 32px 0 0 0;
+  }
+}
+@media only screen and (min-width: 992px) and (min-width: 992px) {
+  body main .container .containerright button {
+    border: none;
+    color: #eeeeee;
+    background-color: #232323;
+    width: 200px;
+    height: 100px;
+    font-size: 24px;
+    border-radius: 16px;
+  }
+  body main .container .containerright button:hover {
+    background-color: #444;
+    color: white;
+    cursor: pointer;
+  }
+  body main .container .containerright button:active {
+    background-color: #555;
+  }
+}
+@media only screen and (min-width: 992px) and (max-width: 992px) {
+  body main .container .containerright button {
+    border: none;
+    color: #eeeeee;
+    background-color: #232323;
+    width: 100px;
+    height: 50px;
+    font-size: 16px;
+    border-radius: 8px;
+  }
+  body main .container .containerright button:hover {
+    background-color: #444;
+    color: white;
+    cursor: pointer;
+  }
+  body main .container .containerright button:active {
+    background-color: #555;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+  body main .container {
+    display: grid;
+    grid-template-columns: 440px auto;
+    grid-template-rows: auto;
+    justify-content: space-between;
+  }
+  body main .container .containerleft {
+    width: 440px;
+    float: left;
+    display: grid;
+    grid-template-columns: 400px;
+    grid-template-rows: 240px 30px;
+    grid-gap: 32px;
+    justify-content: center;
+    margin: 64px 0;
+  }
+  body main .container .containerleft #displayimg {
+    background-color: #555;
+    height: 240px;
+    width: 400px;
+  }
+  body main .container .containerleft .imgcontainer {
+    width: 400px;
+    display: grid;
+    grid-template-columns: 50px 50px 50px 50px 50px;
+    grid-template-rows: 30px;
+    grid-gap: 8px;
+    justify-content: space-between;
+    align-items: center;
+  }
+  body main .container .containerleft .imgcontainer .imgslide {
+    background-color: #555;
+    height: 30px;
+    width: 50px;
+    cursor: pointer;
+  }
+  body main .container .containerright {
+    width: 100%;
+    float: left;
+    margin: 32px 0;
+  }
+  body main .container .containerright h1 {
+    font-size: 48px;
+    margin: 32px 0 0 0;
+  }
+  body main .container .containerright h3 {
+    font-size: 24px;
+    margin: 16px 0 0 0;
+  }
+  body main .container .containerright p {
+    font-size: 16px;
+    margin: 32px 20% 0 0;
+  }
+  body main .container .containerright button {
+    margin: 32px 0 0 0;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 992px) and (min-width: 992px) {
+  body main .container .containerright button {
+    border: none;
+    color: #eeeeee;
+    background-color: #232323;
+    width: 200px;
+    height: 100px;
+    font-size: 24px;
+    border-radius: 16px;
+  }
+  body main .container .containerright button:hover {
+    background-color: #444;
+    color: white;
+    cursor: pointer;
+  }
+  body main .container .containerright button:active {
+    background-color: #555;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 992px) and (max-width: 992px) {
+  body main .container .containerright button {
+    border: none;
+    color: #eeeeee;
+    background-color: #232323;
+    width: 100px;
+    height: 50px;
+    font-size: 16px;
+    border-radius: 8px;
+  }
+  body main .container .containerright button:hover {
+    background-color: #444;
+    color: white;
+    cursor: pointer;
+  }
+  body main .container .containerright button:active {
+    background-color: #555;
+  }
+}
+@media only screen and (max-width: 768px) {
+  body main .container {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+  }
+  body main .container .containerleft {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+  }
+  body main .container .containerleft #displayimg {
+    background-color: #555;
+    width: 100%;
+    height: auto;
+    margin-bottom: 32px;
+  }
+  body main .container .containerleft .imgcontainer {
+    display: grid;
+    grid-template-columns: 50px 50px 50px 50px 50px;
+    grid-template-rows: 30px;
+    justify-content: space-around;
+  }
+  body main .container .containerleft .imgcontainer .imgslide {
+    background-color: #555;
+    width: 50px;
+    height: 30px;
+    cursor: pointer;
+  }
+  body main .container .containerright {
+    text-align: center;
+    margin-top: 64px;
+  }
+  body main .container .containerright h1 {
+    font-size: 32px;
+    margin: 0;
+  }
+  body main .container .containerright h3 {
+    font-size: 16px;
+    margin: 8px 0 0 0;
+  }
+  body main .container .containerright p {
+    font-size: 16px;
+    margin: 32px 0 0 0;
+  }
+  body main .container .containerright button {
+    margin: 32px 0 0 0;
+  }
+}
+@media only screen and (max-width: 768px) and (min-width: 992px) {
+  body main .container .containerright button {
+    border: none;
+    color: #eeeeee;
+    background-color: #232323;
+    width: 200px;
+    height: 100px;
+    font-size: 24px;
+    border-radius: 16px;
+  }
+  body main .container .containerright button:hover {
+    background-color: #444;
+    color: white;
+    cursor: pointer;
+  }
+  body main .container .containerright button:active {
+    background-color: #555;
+  }
+}
+@media only screen and (max-width: 768px) and (max-width: 992px) {
+  body main .container .containerright button {
+    border: none;
+    color: #eeeeee;
+    background-color: #232323;
+    width: 100px;
+    height: 50px;
+    font-size: 16px;
+    border-radius: 8px;
+  }
+  body main .container .containerright button:hover {
+    background-color: #444;
+    color: white;
+    cursor: pointer;
+  }
+  body main .container .containerright button:active {
+    background-color: #555;
+  }
+}
+@media only screen and (min-width: 992px) {
+  body footer {
+    width: 100%;
+    height: 400px;
+    clear: both;
+    background-color: #232323;
+    color: #eeeeee;
+    margin: 64px 0 0 0;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-template-rows: 300px;
+    justify-content: center;
+    grid-gap: 12%;
+  }
+  body footer ol {
+    list-style-type: none;
+  }
+  body footer ol .toplist {
+    font-size: 24px;
+    margin: 32px 0 8px 0;
+  }
+  body footer ol .toplist:hover {
+    text-decoration: none;
+    cursor: default;
+  }
+  body footer ol li {
+    line-height: 32px;
+    font-size: 16px;
+    list-style-type: none;
+    color: white;
+  }
+  body footer ol li:hover {
+    text-decoration: dotted underline white;
+    color: white;
+    cursor: pointer;
+  }
+  body #copyright {
+    font-size: 12px;
+    margin: -32px 0 0 32px;
+    color: #dddddd;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+  body footer {
+    width: 100%;
+    height: 640px;
+    clear: both;
+    background-color: #232323;
+    color: #eee;
+    margin: 64px 0 0 0;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: 280px 300px;
+    column-gap: 24%;
+    row-gap: 0;
+    justify-content: center;
+  }
+  body footer ol {
+    list-style-type: none;
+  }
+  body footer ol .toplist {
+    font-size: 24px;
+    margin: 32px 0 8px 0;
+  }
+  body footer ol .toplist:hover {
+    text-decoration: none;
+    cursor: default;
+  }
+  body footer ol li {
+    line-height: 32px;
+    font-size: 16px;
+  }
+  body footer ol li:hover {
+    text-decoration: dotted underline white;
+    color: white;
+    cursor: pointer;
+  }
+  body #copyright {
+    font-size: 12px;
+    margin: -32px 0 0 32px;
+    color: #dddddd;
+  }
+}
+@media only screen and (max-width: 768px) {
+  body footer {
+    width: 100%;
+    height: 1080px;
+    clear: both;
+    background-color: #232323;
+    color: #eeeeee;
+    margin: 64px 0 0 0;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 280px 180px 280px 300px;
+    row-gap: 0;
+    justify-content: center;
+  }
+  body footer ol {
+    list-style-type: none;
+  }
+  body footer ol li {
+    line-height: 32px;
+    font-size: 16px;
+  }
+  body footer ol li:hover {
+    text-decoration: dotted underline white;
+    color: white;
+    cursor: pointer;
+  }
+  body footer ol li:focus {
+    text-decoration: dotted underline white;
+    color: white;
+    cursor: pointer;
+  }
+  body footer ol li:active {
+    text-decoration: dotted underline white;
+    color: white;
+    cursor: pointer;
+  }
+  body footer ol .toplist {
+    font-size: 24px;
+  }
+  body #copyright {
+    font-size: 12px;
+    margin: -34px 0 0 32px;
+    color: #ddd;
+  }
+}
+body footer {
+  padding: 32px 0 0 0;
+}
+
+/*# sourceMappingURL=product.css.map */

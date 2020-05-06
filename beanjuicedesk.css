@@ -7,6 +7,7 @@ body{
 
 h1{
     cursor:default;
+    font-size: 48px;
 }
 h2{
     cursor:default;
@@ -62,6 +63,8 @@ nav ol:hover{
 nav li{
     padding:21px 5px 21px 5px;
     font-size:20px;
+    text-decoration: none;
+    color:white;
 }
 
 nav li:hover{
@@ -100,7 +103,7 @@ h1{
 }
 
 section{
-    background-image: url("background.jpg");
+    background-image: url("photo/background.jpg");
     background-position:center;
     height:600px;
     width:100%;
@@ -333,13 +336,13 @@ section{
 #buynow{
     width:500px;
     height:400px;
-    background-image: url("colorsmoke.png");
+    background-image: url("photo/colorsmoke.png");
 }
 
 #email{
     width:500px;
     height:400px;
-    background-image: url("colorsmoke.png");
+    background-image: url("photo/colorsmoke.png");
 }
 
 #actions button{

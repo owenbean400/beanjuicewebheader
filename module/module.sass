@@ -1,0 +1,296 @@
+$darkcolor1: #232323
+$darkcolor2: #333
+$darkcolor3:#444
+$darkcolor4: #555
+$lightcolor1: #eee
+$lightcolor2: #ddd
+$lightcolor3: white
+$fontsizedesk1: 48px
+$fontsizedesk2: 24px
+$fontsizedesk3: 16px
+$fontsizephone1: 32px
+$fontsizephone2: 16px
+$fontsizephone3: 12px
+
+@mixin navbar
+
+    @media only screen and (max-width: 768px)
+        nav
+            background-color: $darkcolor1
+            width: 100%
+            height: 64px
+            color: $lightcolor1
+            position: fixed
+            top: 0
+            z-index: 1
+
+            #navlogo
+                width: 80px
+                float: left
+                padding: 4px 10px 0 10px
+            
+            #hamburger
+                float: right
+                height: 48
+                padding: 8px 9px 0 0
+                &:hover
+                    cursor: pointer
+            
+            #navmid
+                width: 100%
+                clear: both
+                display: none
+
+                ol
+                    background-color: $darkcolor2
+                    display: block
+                    list-style-type: none
+                    text-decoration: none
+                    height: 50px
+                    overflow: hidden
+                    width: 33.3333%
+                    padding: 0 0 0 0
+                    margin: 8px 0 0 0
+                    float: left
+                    text-align: center
+                    &:hover
+                        height: auto
+                        background-color: $darkcolor3
+                    &:focus
+                        height: auto
+                        background-color: $darkcolor3
+                    &:active
+                        height: auto
+                        background-color: $darkcolor3
+
+                    li
+                        padding: 16px 1px 16px 1px
+                        width: 100%
+                        list-style-type: none
+                        text-decoration: none
+                        text-align: center
+                        font-size: $fontsizephone2
+                        list-style-type: none
+                        color: $lightcolor3
+                        &:hover
+                            cursor: pointer
+                            background-color: $darkcolor4
+                        &:focus
+                            cursor: pointer
+                            background-color: $darkcolor4
+                        &:active
+                            cursor: pointer
+                            background-color: $darkcolor4
+
+    @media only screen and (min-width: 768px)
+        nav
+            background-color: $darkcolor1
+            width: 100%
+            height: 64px
+            color: $lightcolor1
+            position: fixed
+            top: 0
+            z-index: 1
+
+            #navlogo
+                width: 80px
+                float: left
+                padding: 4px 10px 0 10px
+                cursor: alias
+            
+            #hamburger
+                float: right
+                height: 48
+                padding: 8px 9px 0 0
+                display: none
+            
+            #navmid
+                width: 570px
+                margin: auto
+
+                ol
+                    width: 190px
+                    float: left
+                    text-decoration: none
+                    list-style-type: none
+                    height: 50px
+                    overflow: hidden
+                    padding: 2px 0px 0px 0px
+                    margin: -5px 0px 5px 0px
+                    text-align: center
+                    &:hover
+                        height: auto
+                        background-color: $darkcolor2
+                        overflow: visible
+
+                    .hidden
+                        overflow: hidden
+
+                    li
+                        padding: 21px 5px 18px 5px
+                        font-size: $fontsizedesk2
+                        list-style-type: none
+                        color: $lightcolor3
+                        &:hover
+                            cursor: pointer
+                            background-color: $darkcolor3
+                        &:active
+                            background-color: $darkcolor4
+
+@mixin footer
+    @media only screen and (min-width: 992px)
+        footer
+            width: 100%
+            height: 400px
+            clear: both
+            background-color: #232323
+            color: #eeeeee
+            margin: 64px 0 0 0
+            display: grid
+            grid-template-columns: auto auto auto auto
+            grid-template-rows: 300px
+            justify-content: center
+            grid-gap: 12%
+
+            ol
+                list-style-type: none
+
+                .toplist
+                    font-size: $fontsizedesk2
+                    margin: 32px 0 8px 0
+                    &:hover
+                        text-decoration: none
+                        cursor: default
+                    
+                li
+                    line-height: 32px
+                    font-size: $fontsizedesk3
+                    list-style-type: none
+                    color: $lightcolor3
+                    &:hover
+                        text-decoration: dotted underline white
+                        color: white
+                        cursor: pointer
+
+        #copyright
+            font-size: $fontsizephone3
+            margin: -32px 0 0 32px
+            color: #dddddd
+
+    @media only screen and (min-width:768px) and (max-width:992px)
+        footer
+            width: 100%
+            height: 640px
+            clear: both
+            background-color: $darkcolor1
+            color: $lightcolor1
+            margin: 64px 0 0 0
+            display: grid
+            grid-template-columns: auto auto
+            grid-template-rows: 280px 300px
+            column-gap: 24%
+            row-gap: 0
+            justify-content: center
+
+            ol
+                list-style-type: none
+
+                .toplist
+                    font-size: $fontsizephone2 + 8
+                    margin: 32px 0 8px 0
+                    &:hover
+                        text-decoration: none
+                        cursor: default
+                    
+                li
+                    line-height: 32px
+                    font-size: $fontsizephone2
+                    &:hover
+                        text-decoration: dotted underline white
+                        color: white
+                        cursor: pointer
+
+        #copyright
+            font-size: $fontsizephone3
+            margin: -32px 0 0 32px
+            color: #dddddd
+
+    @media only screen and (max-width:768px)
+        footer
+            width: 100%
+            height: 1080px
+            clear: both
+            background-color: #232323
+            color: #eeeeee
+            margin: 64px 0 0 0
+            display: grid
+            grid-template-columns: auto
+            grid-template-rows: 280px 180px 280px 300px
+            row-gap: 0
+            justify-content: center
+
+            ol
+                list-style-type: none
+
+                li
+                    line-height: 32px
+                    font-size: $fontsizephone2
+                    &:hover
+                        text-decoration: dotted underline white
+                        color: white
+                        cursor: pointer
+                    &:focus
+                        text-decoration: dotted underline white
+                        color: white
+                        cursor: pointer
+                    &:active
+                        text-decoration: dotted underline white
+                        color: white
+                        cursor: pointer
+                    
+                .toplist
+                    font-size: $fontsizephone2 + 8
+
+        #copyright
+            font-size: 12px
+            margin: -34px 0 0 32px
+            color: $lightcolor2  
+
+    footer
+        padding: 32px 0 0 0
+
+@mixin button
+
+    @media only screen and (min-width: 992px)
+        border: none
+        color: #eeeeee
+        background-color: $darkcolor1
+        width: 200px
+        height: 100px
+        font-size: $fontsizedesk2
+        border-radius: 16px
+        &:hover
+            background-color: $darkcolor3
+            color: white
+            cursor: pointer
+        &:active
+            background-color: $darkcolor4
+
+    @media only screen and (max-width: 992px)
+        border: none
+        color: #eeeeee
+        background-color: #232323
+        width: 100px
+        height: 50px
+        font-size: $fontsizephone2
+        border-radius: 8px
+        &:hover
+            background-color: $darkcolor3
+            color: white
+            cursor: pointer
+        &:active
+            background-color: $darkcolor4
+
+@mixin zeroside
+    margin: 0
+    padding: 0

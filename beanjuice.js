@@ -3,10 +3,10 @@ var dm = 352
 var pm = 198
 var m = 0
 var styleSheet = document.createElement("style")
-var showing = 0
 
 window.onload = function marginsett() {
     {
+
         if(window.innerWidth > 880){
         n = -60;
         document.getElementById("shopview").style.marginLeft = n;
@@ -20,8 +20,6 @@ window.onload = function marginsett() {
             document.getElementById('slide').style.zIndex = "1";
             document.getElementById('slide').style.height = "701px";
             document.getElementById('slide').style.overflow = "hidden";
-        document.getElementById('navmid').style.display = "block";
-        showing = 1;
         }
         else{
         n = -10;
@@ -33,8 +31,6 @@ window.onload = function marginsett() {
             document.getElementById('slide').style.zIndex = "0";
             document.getElementById('slide').style.height = "auto";
             document.getElementById('slide').style.overflow = "hidden";
-        document.getElementById('navmid').style.display = "none";
-        showing = 0;
         }
       }
 }
@@ -54,8 +50,6 @@ window.addEventListener("resize", function(){
         document.getElementById('slide').style.zIndex = "1";
         document.getElementById('slide').style.height = "701px";
         document.getElementById('slide').style.overflow = "hidden";
-    document.getElementById('navmid').style.display = "block";
-    showing = 1;
     }
     else{
     n = -10;
@@ -158,25 +152,5 @@ function sprayleft(){
     }
     else{
         console.log("DENIAL")
-    }
-}
-
-function navchange() {
-    if(window.innerWidth < 880){
-        if(showing == 0){
-            document.getElementById('navmid').style.display = "block";
-            showing = 1;
-            console.log("block");
-        }
-        else{
-            document.getElementById('navmid').style.display = "none";
-            console.log("none");
-            showing = 0;
-        }
-    }
-    else{
-            document.getElementById('navmid').style.display = block;
-            console.log("block");
-            showing = 1;
     }
 }

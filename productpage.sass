@@ -1,0 +1,188 @@
+@import module/module.sass
+
+@mixin image
+    background-color: $darkcolor4
+
+body
+    @include zeroside
+    width: 100%
+    background-color: #eeeeee
+    font-family: helvetica, Arial, sans-serif
+
+    @include navbar
+        
+    main
+        margin: 64px 0 0 0
+
+        @media only screen and (min-width: 992px)
+
+            .container
+                display: grid
+                grid-template-columns: 600px auto
+                grid-template-rows: auto
+                justify-content: center
+                grid-gap: 2%
+
+                .containerleft
+                    width: 600px
+                    float: left
+                    display: grid
+                    grid-template-columns: 500px
+                    grid-template-rows: 300px 100px
+                    grid-gap: 32px
+                    justify-content: center
+                    margin: 64px 0
+
+                    #displayimg
+                        @include image
+                        height: 300px
+                        width: 500px
+
+                    .imgcontainer
+                        width: 500px
+                        display: grid
+                        grid-template-columns: 50px 50px 50px 50px 50px
+                        grid-template-rows: 50px
+                        grid-gap: 16px
+                        justify-content: space-between
+                        align-items: center
+
+                        .imgslide
+                            @include image
+                            height: 30px
+                            width: 50px
+                            cursor: pointer
+                            &:hover
+                                border-bottom: solid 2px $darkcolor1
+
+                .containerright
+                    width: 100%
+                    float: left
+                    margin: 32px 0
+
+                    h1
+                        font-size: $fontsizedesk1
+                        margin: 32px 0 0 0
+
+                    h3
+                        font-size: $fontsizedesk2
+                        margin: 16px 0 0 0
+
+                    p
+                        font-size: $fontsizedesk3
+                        margin: 32px 20% 0 0
+
+                    button
+                        @include button
+                        margin: 32px 0 0 0
+
+        @media only screen and (min-width:768px) and (max-width:992px)
+
+            .container
+                display: grid
+                grid-template-columns: 440px auto
+                grid-template-rows: auto
+                justify-content: space-between
+
+                .containerleft
+                    width: 440px
+                    float: left
+                    display: grid
+                    grid-template-columns: 400px
+                    grid-template-rows: 240px 30px
+                    grid-gap: 32px
+                    justify-content: center
+                    margin: 64px 0
+
+                    #displayimg
+                        @include image
+                        height: 240px
+                        width: 400px
+
+                    .imgcontainer
+                        width: 400px
+                        display: grid
+                        grid-template-columns: 50px 50px 50px 50px 50px
+                        grid-template-rows: 30px
+                        grid-gap: 8px
+                        justify-content: space-between
+                        align-items: center
+
+                        .imgslide
+                            @include image
+                            height: 30px
+                            width: 50px
+                            cursor: pointer
+
+                .containerright
+                    width: 100%
+                    float: left
+                    margin: 32px 0
+
+                    h1
+                        font-size: $fontsizedesk1
+                        margin: 32px 0 0 0
+
+                    h3
+                        font-size: $fontsizedesk2
+                        margin: 16px 0 0 0
+
+                    p
+                        font-size: $fontsizedesk3
+                        margin: 32px 20% 0 0
+
+                    button
+                        @include button
+                        margin: 32px 0 0 0
+
+        @media only screen and (max-width:768px)
+
+            .container
+                @include zeroside
+                width: 100%
+
+                .containerleft
+                    @include zeroside
+                    width: 100%
+
+                    #displayimg
+                        @include image
+                        width: 100%
+                        height: auto
+                        margin-bottom: 32px
+
+                    .imgcontainer
+                        display: grid
+                        grid-template-columns: 50px 50px 50px 50px 50px
+                        grid-template-rows: 30px
+                        justify-content: space-around
+
+                        .imgslide
+                            @include image
+                            width: 50px
+                            height: 30px
+                            cursor: pointer
+
+                .containerright
+                    text-align: center
+                    margin-top: 64px
+
+                    h1
+                        font-size: $fontsizephone1
+                        margin: 0
+
+                    h3
+                        font-size: $fontsizephone2
+                        margin:8px 0 0 0
+
+                    p
+                        font-size: $fontsizephone2
+                        margin: 32px 0 0 0
+
+                    button
+                        @include button
+                        margin: 32px 0 0 0
+
+
+
+    @include footer
