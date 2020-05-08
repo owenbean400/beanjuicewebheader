@@ -1,4 +1,5 @@
-    qtyCartNum()
+qtyCartNum();
+
 //load window    
     window.onload = function loading() {
 
@@ -85,12 +86,14 @@
     }
 
     function qtyCartNum(){
-            if(Number.isNaN(sessionStorage.getItem('qty')) == false){
-                sessionStorage.setItem('qty', 0);
+            if(!window.sessionStorage.getItem('qty')){
+                window.sessionStorage.setItem('qty', 0);
+                window.sessionStorage.setItem('demon', "demon0");
+                window.sessionStorage.setItem('sunshine', "sunshine0");
+                window.sessionStorage.setItem('icy', "sunshine0");
             }
             else{
-                data = sessionStorage.getItem('qty');
-                sessionStorage.setItem('qty', data);
+                window.sessionStorage.setItem('qty', window.sessionStorage.getItem('qty'));
             }
     }
 

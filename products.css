@@ -3,6 +3,10 @@ body {
   padding: 0;
   font-family: helvetica, Arial, sans-serif;
 }
+body nav a {
+  text-decoration: none;
+  color: inital;
+}
 @media only screen and (max-width: 768px) {
   body a.button {
     text-decoration: none;
@@ -335,6 +339,10 @@ body main #flex {
     margin: 20px 0 0 0;
   }
 }
+body a {
+  text-decoration: none;
+  color: inital;
+}
 @media only screen and (min-width: 992px) {
   body #subscribe {
     width: 100%;
@@ -544,6 +552,7 @@ body main #flex {
   body footer ol li {
     line-height: 32px;
     font-size: 16px;
+    color: white;
   }
   body footer ol li:hover {
     text-decoration: dotted underline white;
@@ -651,6 +660,7 @@ body main #flex {
   body footer ol li {
     line-height: 32px;
     font-size: 16px;
+    color: white;
   }
   body footer ol li:hover {
     text-decoration: dotted underline white;

@@ -978,7 +978,7 @@ body nav a {
     background-color: #555;
   }
 }
-body footer a {
+body a {
   text-decoration: none;
   color: inital;
 }
@@ -1191,6 +1191,7 @@ body footer a {
   body footer ol li {
     line-height: 32px;
     font-size: 16px;
+    color: white;
   }
   body footer ol li:hover {
     text-decoration: dotted underline white;
@@ -1298,6 +1299,7 @@ body footer a {
   body footer ol li {
     line-height: 32px;
     font-size: 16px;
+    color: white;
   }
   body footer ol li:hover {
     text-decoration: dotted underline white;

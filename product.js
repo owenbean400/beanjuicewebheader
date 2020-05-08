@@ -23,11 +23,26 @@ var image = {
     }
 
 };
-var qtynow = 0;
-var data = "";
+var data = {
+    demon: {
+        name: "demon",
+        qty: sessionStorage.getItem("demon").match(/\d+$/g)
+    },
+    sunshine: {
+        name: "sunshine",
+        qty: sessionStorage.getItem("sunshine").match(/\d+$/g)
+    },
+    icy: {
+        name: "icy",
+        qty: sessionStorage.getItem("icy").match(/\d+$/g)
+    }
+}
 
-    function demon(num){
-        if(display == 1){
+    qtyCartNum();
+
+    function photoChange(num){
+        
+        if(display == 0){
             if(num === 1){
                 document.getElementById('displayimg').src = image.red.one;
             }
@@ -44,7 +59,7 @@ var data = "";
                 document.getElementById('displayimg').src = image.red.five;
             };
         }
-        else if(display == 2){
+        else if(display == 1){
             if(num === 1){
                 document.getElementById('displayimg').src = image.yellow.one;
             }
@@ -84,18 +99,53 @@ var data = "";
     }
 
     function back(){
-        document.getElementById('amount').style.top = "-300px";
-        quantityCart();
+        if(qtynow = document.getElementById('quantity').value >= 0 && document.getElementById('quantity').value < 6){
+            document.getElementById('amount').style.top = "-300px";
+            qtyChange();
+        }
+        else if(document.getElementById('quantity').value > 5){
+            alert("We only sell 5 at a time to a customer due to limited stock");
+        
+        }
+        else{
+            alert("Please choose a positive number");
+        }
     }
 
-    function quantityCart(){
-        qtynow = document.getElementById('quantity').value;
-        qtynow = parseInt(qtynow, 10);
-        data = sessionStorage.getItem('qty');
-        data = parseInt(data, 10)
-        data += qtynow
-        console.log(data);
-        sessionStorage.clear();
-        sessionStorage.setItem('qty', data);
+    function qtyChange(){
+        var newValue = document.getElementById('quantity').value
+        if(display == 0){
+            let oldValue = sessionStorage.getItem("demon").match(/\d+$/g)[0];
+            oldValue = parseInt(oldValue, 10);
+            newValue = parseInt(newValue, 10);
+            console.log(newValue);
+            console.log(oldValue);
+            let value = oldValue + newValue;
+            data.demon.qty = value;
+            sessionStorage.setItem("demon", data.demon.name + data.demon.qty);
+        }
+        else if(display == 1){
+            let oldValue = sessionStorage.getItem("sunshine").match(/\d+$/g)[0];
+            oldValue = parseInt(oldValue, 10);
+            newValue = parseInt(newValue, 10);
+            console.log(newValue);
+            console.log(oldValue);
+            let value = oldValue + newValue;
+            data.sunshine.qty = value;
+            sessionStorage.setItem("sunshine", data.sunshine.name + data.sunshine.qty);
+        }
+        else{
+            let oldValue = sessionStorage.getItem("icy").match(/\d+$/g)[0];
+            oldValue = parseInt(oldValue, 10);
+            newValue = parseInt(newValue, 10);
+            console.log(newValue);
+            console.log(oldValue);
+            let value = oldValue + newValue;
+            data.icy.qty = value;
+            sessionStorage.setItem("icy", data.icy.name + data.icy.qty);
+        }
+        let qtyvalue = parseInt(data.demon.qty, 10) + parseInt(data.sunshine.qty, 10) + parseInt(data.icy.qty, 10);
+        sessionStorage.setItem("qty", qtyvalue);
         cartAmount();
+
     }

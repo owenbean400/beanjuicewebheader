@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,7 +17,7 @@
         <link rel="apple-touch-icon" sizes="180x180" href="ogblogo/apple-touch-icon-180x180.png" />
         <title>Bean Juice</title>
     </head>
-    <body>
+    <body onload="display = 0; cartAmount();">
         <nav>                                                                        <!-- NavBar Start -->
             <a href="index.html"><img src="photo/logo-01.png" id="navlogo"></a>
             <img src="photo/hamburger-02.png" id="hamburger">
@@ -57,11 +58,11 @@
                 <div class="containerleft">
                     <img id="displayimg" src="photo/product/red1.jpg">
                     <div class="imgcontainer">
-                        <img class="imgslide" src="photo/product/red1.jpg" onclick= "display = 1; demon(1);">
-                        <img class="imgslide" src="photo/product/red2.jpg" onclick="display = 1; demon(2);">
-                        <img class="imgslide" src="photo/product/red3.jpg" onclick="display = 1; demon(3);">
-                        <img class="imgslide" src="photo/product/red4.jpg" onclick="display = 1; demon(4);">
-                        <img class="imgslide" src="photo/product/red5.jpg" onclick="display = 1; demon(5);">
+                        <img class="imgslide" src="photo/product/red1.jpg" onclick= "photoChange(1);">
+                        <img class="imgslide" src="photo/product/red2.jpg" onclick="photoChange(2);">
+                        <img class="imgslide" src="photo/product/red3.jpg" onclick="photoChange(3);">
+                        <img class="imgslide" src="photo/product/red4.jpg" onclick="photoChange(4);">
+                        <img class="imgslide" src="photo/product/red5.jpg" onclick="photoChange(5);">
                     </div>
                 </div>
                 <div class="containerright">
@@ -71,8 +72,7 @@
                         Thundercats are on the move, Thundercats are loose. Feel the magic, hear the roar, Thundercats are loose. Thunder, thunder, thunder, Thundercats! Thunder, thunder, thunder, Thundercats! Thunder, thunder, thunder, Thundercats! Thunder, thunder, thunder, Thundercats! Thundercats!
                     </p>
                     <button onclick="amount()">
-                        Buy Now
-                    </button>
+                        Buy Now</button>
                 </div>
             </div>
         </main>    
@@ -120,7 +120,7 @@
             <h4>Speed Demon</h4>
             <div id="quantitycontainer">
                 <label>Quantity</label>
-                <input type="number" max="5" min="0" id="quantity">
+                <input type="number" max="5" min="0" id="quantity" value="0">
             </div>
             <img src="photo/redcanweb.png" id="qtyimg">
             <div id="qtybuttoncontainer">
