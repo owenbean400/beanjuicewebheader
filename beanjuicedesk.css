@@ -93,7 +93,35 @@ h1{
     height:48;
     padding:8px 9px 0 0;
     display:none;
-}                                                                           /*navbar end*/
+} 
+#checkout{
+    height: 64px;
+    width: 64px;
+    float: right;
+    margin: 0 24px 0 0;
+    cursor: pointer;
+}                      
+
+#cart{
+    height: 48px;
+    width: 48px;
+    position:absolute;
+    top:12px;
+    right: 24px;
+}
+#qty{
+    height:24px;
+    width:32px;
+    position:absolute;
+    background-color: rgba(200,200,200,1);
+    color: #232323;
+    text-align:center;
+    padding-top: 8px;
+    border-radius: 100%;
+    top: 4px;
+    right: 12px;
+}
+                                                                            /*navbar end*/
                                                                             /*section 1*/
 .headtext{
     font-size:84px;

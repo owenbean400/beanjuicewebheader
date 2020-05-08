@@ -70,7 +70,36 @@ nav li:hover, nav li:focus, nav li:active{
 
 #hamburger:hover{
     cursor:pointer;
-}                                                                                       /* NavBar End */   
+}                    
+#checkout{
+    height: 64px;
+    width: 64px;
+    margin: 0 -24px 0 0;
+    cursor: pointer;
+    position: fixed;
+    left: 106px;
+    top: 0;
+}                      
+
+#cart{
+    height: 32px;
+    width: 32px;
+    position:absolute;
+    top:24px;
+    right: 24px;
+}
+#qty{
+    height:20px;
+    width:24px;
+    position:absolute;
+    background-color: rgba(200,200,200,1);
+    color: #232323;
+    text-align:center;
+    padding-top: 4px;
+    border-radius: 100%;
+    top: 12px;
+    right: 16px;
+}                                                                                          /* NavBar End */   
                                                                                         /*display head sprays*/ 
 .headtext{
     margin:150px 0px -10px 0;

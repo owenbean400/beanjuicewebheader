@@ -1,7 +1,6 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="beanjuicedesk.css" rel="stylesheet" media="screen and (min-width:880px)"/>
-    <link href="beanjuicephone.css" rel="stylesheet" media="screen and (max-width:880px)"/>
+    <link href="home.css" rel="stylesheet"/>
     <script src="beanjuice.js"></script>
     <script src="beanmaster.js"></script>
 	<link rel="shortcut icon" href="ogblogo/favicon.ico" type="image/x-icon" />
@@ -25,8 +24,8 @@
                 <li class="navhead">Products</li>
                 <div class="hidden">
                     <a href="speeddemon.html"><li class="navselect">Speed Demon</li></a>
-                    <li class="navselect">Sunshine</li>
-                    <li class="navselect">Icicles</li>
+                    <a href="sunshine.html"><li class="navselect">Sunshine</li></a>
+                    <a href="icy.html"><li class="navselect">Icicles</li></a>
                 </div>
             </ol>
             <ol aria-haspopup="true" role="button" tabIndex="0">
@@ -45,6 +44,11 @@
                 </div>
             </ol>
         </div>
+        <div id="checkout">
+            <img src="photo/cart-01.png" id="cart">
+            <span id="qty">0</span>
+        </div>
+        
 
     </nav>                                                                       <!-- NavBar End -->
     <main>
@@ -57,8 +61,8 @@
         <div class="displayimg">
             <div id="slide">
                 <a href="speeddemon.html"><img src="photo/redcanweb.png" class="sprayimg" /></a>
-                <img src="photo/yellowcanweb.png" class="sprayimg" />
-                <img src="photo/bluecanweb.png" class="sprayimg" />
+                <a href="sunshine.html"><img src="photo/yellowcanweb.png" class="sprayimg" /></a>
+                <a href="icy.html"><img src="photo/bluecanweb.png" class="sprayimg" /></a>
             </div>
         </div>
     </header>
@@ -80,36 +84,36 @@
             <img class="shopspray" src="photo/redcanweb.png"/>
             <p>$12.99</p>
         </div></a>
-        <div class="item yellowbg" onclick="yellowPage()">
+        <a href="sunshine.html"><div class="item yellowbg" onclick="yellowPage()">
             <h5>Ray of Sunshine</h5>
             <h6>Bean Juice</h6>
             <img class="shopspray" src="photo/yellowcanweb.png"/>
             <p>$12.99</p>
-        </div>
-        <div class="item bluebg" onclick="bluePage()">
+        </div></a>
+        <a href="icy.html"><div class="item bluebg" onclick="bluePage()">
             <h5>Icy Icicles</h5>
             <h6>Bean Juice</h6>
             <img class="shopspray" src="photo/bluecanweb.png"/>
             <p>$12.99</p>
-        </div>
-        <div class="item redbg">
+        </div></a>
+        <a href="speeddemon.html"><div class="item redbg" onclick="redPage()">
             <h5>Speed Demon</h5>
             <h6>Bean Juice</h6>
             <img class="shopspray" src="photo/redcanweb.png"/>
             <p>$12.99</p>
-        </div>
-        <div class="item yellowbg">
+        </div></a>
+        <a href="sunshine.html"><div class="item yellowbg" onclick="yellowPage()">
             <h5>Ray of Sunshine</h5>
             <h6>Bean Juice</h6>
             <img class="shopspray" src="photo/yellowcanweb.png"/>
             <p>$12.99</p>
-        </div>
-        <div class="item bluebg">
-            <h5>Speed Demon</h5>
+        </div></a>
+        <a href="icy.html"><div class="item bluebg" onclick="bluePage()">
+            <h5>Icy Icicles</h5>
             <h6>Bean Juice</h6>
             <img class="shopspray" src="photo/bluecanweb.png"/>
             <p>$12.99</p>
-        </div>
+        </div></a>
     </div>
     
     </article>
@@ -117,22 +121,27 @@
 </div>
     <article id="actions">                                                       <!--buynow and email link-->
         <div id="buynow">
-            <button>Buy Now</button>
+            <a href="products.html"><button>Shop Now</button></a>
         </div>
-        <div id="email">
-            <button>Email <br> Sign Up</button>
+        <div id="aboutus">
+            <button>About Us</button>
         </div>
     </article>
     </main>
+    <div id="subscribe">
+    <button type="submit" form="emailform" value="emailAddress">Email Subscription</button>
+    <form id="emailform" onsubmit="return false">
+        <input type="email" id="email" name="email" placeholder="Email Address Here">
+    </form>
+    </div>
     <footer>
         <ol>
-            <li class="toplist">Products</li>
-            <li>Bean Juice</li>
-            <li>Bean Spray</li>
-            <li>Bean Soap</li>
-            <li>Speed Demon</li>
-            <li>Ray of Sunshine</li>
-            <li>Icy Icicles</li>
+            <a href="products.html"><li class="toplist">Products</li></a>
+            <a href="index.html"><li>Bean Juice</li></a>
+            <a href="speeddemon.html"><li>Speed Demon</li></a>
+            <a href="sunshine.html"><li>Ray of Sunshine</li></a>
+            <a href="icy.html"><li>Icy Icicles</li></a>
+            <li>Cart</li>
         </ol>
         <ol>
             <li class="toplist">Fun</li>

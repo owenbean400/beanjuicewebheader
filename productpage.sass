@@ -6,8 +6,8 @@
 body
     @include zeroside
     width: 100%
-    background-color: #eeeeee
-    font-family: helvetica, Arial, sans-serif
+    background-color: $lightcolor1
+    font-family: $fontfamily
 
     @include navbar
         
@@ -186,3 +186,89 @@ body
 
 
     @include footer
+
+    #amount
+        position: fixed
+        background-color: $darkcolor4
+        z-index: 1
+        top: -300px
+        left: 50%
+        transform: translate(-50%, -50%)
+        -webkit-box-shadow: 4px 4px 32px 5px rgba(0,0,0,0.25)
+        -moz-box-shadow: 4px 4px 32px 5px rgba(0,0,0,0.25)
+        box-shadow: 4px 4px 32px 5px rgba(0,0,0,0.25)
+        border-radius: 16px
+        transition: top .33s
+
+        @media only screen and (min-width: 768px)
+            display: grid
+            grid-template-columns: auto
+            grid-template-areas: auto auto auto auto auto
+            grid-gap: 32px
+            justify-content: center
+            padding: 32px 80px 64px 80px
+
+        @media only screen and (max-width: 768px)
+            display: grid
+            grid-template-columns: auto
+            grid-template-areas: auto auto auto auto auto
+            grid-gap: 32px
+            justify-content: center
+            width: 100%
+            max-width: 600px
+            padding: 32px 0 64px 0
+
+        #qtybuttoncontainer
+            display: grid
+
+            @media only screen and (min-width: 768px)
+                grid-template-columns: auto auto
+                grid-template-areas: auto
+                grid-gap: 64px
+
+            @media only screen and (max-width: 768px)
+                grid-template-columns: auto
+                grid-template-areas: auto auto
+                grid-gap: 16px
+
+            button
+                @include button
+                margin: auto
+
+        #qtyimg
+            margin: auto
+            @media only screen and (min-width: 768px)
+                height: 200px
+            @media only screen and (max-width: 768px)
+                height: 100px
+
+        h4
+            margin: auto
+            padding: 0
+            color: $lightcolor1
+            text-align: center
+            @media only screen and (min-width: 992px)
+                font-size: $fontsizedesk1
+            @media only screen and (max-width: 992px)
+                font-size: $fontsizephone1
+
+        #quantitycontainer
+            margin: auto
+            display: grid
+            grid-template-columns: auto auto
+            grid-template-areas: auto
+            grid-gap: 16px
+            
+            label
+                margin: 0
+                padding: 0
+                font-size: $fontsizedesk2
+
+            input
+                margin: 0
+                padding: 0
+                color: $darkcolor1
+                background-color: $lightcolor1
+                border: none
+                border-radius: 8px
+                padding-left: 6px

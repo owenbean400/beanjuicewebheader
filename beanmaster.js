@@ -1,11 +1,14 @@
-    
+    qtyCartNum()
 //load window    
     window.onload = function loading() {
 
 //variables
         const NAVLINKS = document.getElementById('navmid');
         const HAMBURGER = document.getElementById('hamburger');
+        const CARTAMOUNT = document.getElementById('qty');
         var showing = true;
+
+        cartAmount();
 
 //screen resized        
         window.addEventListener("resize", function resized() {
@@ -41,9 +44,7 @@
                     showing = 1;
             }
         }
-
-        
-    } 
+    }
 
 //set value of what spray was clicked
     function redPage(){
@@ -81,6 +82,21 @@
             four: "photo/product/blue4.jpg",
             five: "photo/product/blue5.jpg"
         }
+    }
+
+    function qtyCartNum(){
+            if(Number.isNaN(sessionStorage.getItem('qty')) == false){
+                sessionStorage.setItem('qty', 0);
+            }
+            else{
+                data = sessionStorage.getItem('qty');
+                sessionStorage.setItem('qty', data);
+            }
+    }
+
+    
+    function cartAmount(){
+        document.getElementById('qty').innerHTML = sessionStorage.getItem('qty');
     }
 
     

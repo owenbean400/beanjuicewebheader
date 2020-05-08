@@ -1,0 +1,458 @@
+@import module/module.sass
+
+@mixin shopicon
+    .redbg
+        background-color: $darkred1
+        &:hover
+            background-color: $darkred2
+            cursor: pointer
+
+    .yellowbg
+        background-color: $darkyellow1
+        &:hover
+            background-color: $darkyellow2
+            cursor: pointer
+
+    .bluebg
+        background-color: $darkblue1
+        &:hover
+            background-color: $darkblue2
+            cursor: pointer
+
+body
+    @include zeroside
+    background-color: $lightcolor1
+    font-family: $fontfamily
+    overflow-x: hidden
+
+    @include navbar
+
+    @media only screen and (min-width: 767px)
+        h1
+            cursor: default
+            font-size: $fontsizedesk1
+            width: 100%
+            padding: 0px 10px 0px 10px
+
+        h2
+            cursor: default
+
+        h3
+            cursor: default
+
+        main
+            margin-top: 64px
+
+            .headtext
+                font-size: $fontsizedesk1 * 1.5
+                text-align: center
+                margin: 120px 0 -28px 0
+                z-index: 1
+
+            section
+                background-image: url("photo/background.jpg")
+                background-position: center
+                height: 600px
+                width: 100%
+
+            #slide
+                display: grid
+                grid-template-columns: auto auto auto
+                grid-gap: 10%
+                justify-content: center
+                width: 99%
+                margin: -560px auto 0 auto
+                z-index: 1
+                height: 701px
+                overflow: hidden
+
+                .sprayimg
+                    height: 600px
+                    display: block
+                    &:hover
+                        height: 608px
+                        cursor: grab
+                    &:active
+                        height: 598px
+                        cursor: grabbing
+
+            #left
+                display: none
+
+            #right
+                display: none
+
+            #quizquestion
+                width: 800px
+                margin: auto
+
+                #quizquestionbox
+                    height: 500px
+                    width: 300px
+                    overflow: hidden
+                    position: absolute
+
+                    h3
+                        font-size: $fontsizedesk1 * 1.3333
+                        line-height: 72px
+
+                    button
+                        @include button
+
+                    #quizphoto
+                        z-index: -1
+                        float: right
+            
+            #shoptext
+                margin: 128px auto 20px auto
+                text-align: center
+                font-size: $fontsizedesk1 * 1.3333
+            
+            #moveholder
+                width: 100%
+                display: grid
+                grid-template-columns: 50px auto 50px
+                justify-content: space-evenly
+            
+                .right
+                    height: 50px
+                    margin: 272px 0 0 16px
+                    opacity: .5
+                    &:hover
+                        opacity: 1
+                        cursor: pointer
+
+                .left
+                    height: 50px
+                    margin: 272px 0 0 0
+                    opacity: .5
+                    &:hover
+                        opacity: 1
+                        cursor: pointer
+
+            @media only screen and (max-width: 1320px)
+                #shop
+                    width: 620px
+                    height: 500px
+                    padding: 40px 40px 20px 40px
+                    overflow: hidden
+                    
+            @media only screen and (min-width: 1320px)
+                    #shop
+                        width: 960px
+                        height: 500px
+                        padding: 50px 50px 20px 50px
+                        overflow: hidden
+
+            @media only screen and (min-width: 1720px)
+                #shop
+                    width: 1600px
+                    height: 500px
+                    margin: 0px auto 0 auto
+                    padding: 50px 50px 20px 50px
+                    overflow: hidden
+
+            #shopview
+                width: 2500px
+                margin-left: -60px
+                transition: margin .25s
+
+            .item
+                height: 400px
+                width: 300px
+                border-radius: 50px
+                text-align: center
+                color: $lightcolor3
+                float: left
+                margin: 26px
+
+                h5
+                    font-size: 32px
+                    line-heihgt: 0
+                    margin: 20px 0 40px 0
+
+                h6
+                    font-size: 24px
+                    line-height: 0
+                    margin: 0
+
+                p
+                    font-size: $fontsizedesk3
+                    line-height: 0
+
+                .shopspray
+                    height: 200px
+                    line-height: 0
+                    margin: 40px 0 20px 0
+                    width: auto
+                
+            @include shopicon
+
+            @media only screen and (min-width: 1200px)
+                #actions
+                    width: 100%
+                    display: grid
+                    grid-template-columns: auto auto
+                    justify-content: center
+                    grid-gap: 10%
+                    margin-top: 50px
+
+            @media only screen and (max-width: 1200px)
+                #actions
+                    width: 100%
+                    display: grid
+                    grid-template-columns: auto
+                    justify-content: center
+                    grid-gap: 10%
+                    margin-top: 50px
+
+            #buynow
+                width: 500px
+                height: 400px
+                background-image: url("photo/colorsmoke.png")
+
+            #aboutus
+                width: 500px
+                height: 400px
+                background-image: url("photo/colorsmoke.png")
+
+            #actions
+
+                @media only screen and (min-width: 992px)
+                    button
+                        margin: 144px 0 0 144px
+                        @include button  
+
+                @media only screen and (max-width: 992px)
+                    button
+                        margin: 160px 0 0 200px
+                        @include button              
+
+    @media only screen and (max-width: 767px)
+        .headtext
+            margin: 150px 0px -10px 0
+            text-align: center
+            font-size: $fontsizephone1
+
+        .displayimg
+            width: 300px
+            height: 380px
+            overflow: hidden
+            margin: -350px auto 20px auto
+
+        section
+            background-image: url("photo/background.jpg")
+            background-position: center
+            height: 400px
+            width: 100%
+            z-index: -1
+
+        #slide
+            width: 1000px
+            margin: 0
+            transition:  margin .1s
+
+            .sprayimg
+                height: 380px
+                margin: 0 0 0 80px
+
+        button
+            @include button
+
+        #left
+            position: absolute
+            top: 340
+            left: 4
+            z-index: 0
+            opacity: .75
+            &:hover
+                opacity: 1
+                cursor: pointer
+
+        #right
+            position: absolute
+            top: 340
+            right: 4
+            z-index: 0
+            opacity: .75
+            &:hover
+                opacity: 1
+                cursor: pointer
+
+        #quizquestion
+            width: 98%
+            margin: 64px auto 100px auto
+
+            #quizquestionbox
+                height: 400px
+                width: 100px
+                position: absolute
+                left: 10vw
+
+                h3
+                    font-size: $fontsizephone1
+
+                button
+                    margin: 0
+                    @include button
+
+            #quizphoto
+                width: 95%
+                min-width: 360px
+                float: right
+                overflow: hidden
+                margin-bottom: 64px
+
+        @media only screen and (max-width: 900px)
+            #shoptext                                                     
+                margin: 570px auto 10px auto
+                text-align: center
+                font-size: $fontsizephone1 * 1.5
+
+            #shop
+                width: 140px
+                height: 240px
+                margin: 0px auto 0 auto
+                padding: 16px 50px 20px 16px
+                overflow: hidden
+
+        @media only screen and (max-width: 700px)
+            #shoptext                                                      
+                margin: 500px auto 10px auto
+                text-align: center
+                font-size: 38px
+
+            #shop
+                width: 340px
+                height: 240px
+                margin: 0px auto 0 auto
+                padding: 16px 50px 20px 16px
+                overflow: hidden
+
+        @media only screen and (min-width: 0px)
+            #shoptext                                                         
+                margin: 360px auto 10px auto
+                text-align: center
+                font-size: 32px
+
+            #shop
+                width: 140px
+                height: 240px
+                margin: 0px auto 0 auto
+                padding: 16px 50px 20px 16px
+                overflow: hidden
+
+        #moveholder
+            width: 100%
+            display: grid
+            grid-template-columns: 50px auto 50px
+            justify-content: space-evenly
+
+            .right
+                height: 50px
+                margin: 108px 0px 0 0px
+                opacity: .5
+                &:hover
+                    opacity: 1
+                    cursor: pointer
+
+            .left
+                height: 50px
+                margin: 108px 0px 0 0px
+                opacity: .5
+                &:hover
+                    opacity: 1
+                    cursor: pointer
+
+        #shopview
+            width: 2500px
+            margin-left: -10px
+            transition: margin .25s
+
+            .item
+                height: 200px
+                width: 150px
+                border-radius: 25px
+                text-align: center
+                color: white
+                float: left
+                margin: 24px
+
+                h5
+                    font-size: $fontsizephone2
+                    font-weight: 600
+                    line-height: 0
+                    margin: 0px 0 20px 0
+                    padding-top: 24px
+
+                h6
+                    font-size: $fontsizephone3
+                    font-weight: 400
+                    line-height: 0
+                    margin: 0
+
+                p
+                    font-size: $fontsizephone3
+                    line-height: 0
+                    margin: 18px 0 0 0
+
+                .shopspray
+                    height: 100px
+                    line-height: 0
+                    margin: 20px 0 0 0
+
+        @include shopicon
+
+        @media only screen and (min-width: 400px)
+            #actions
+                width: 100%
+                display: grid
+                grid-template-columns: auto
+                justify-content: center
+                grid-gap: 10%
+                margin-top: 20px
+
+                #buynow
+                    width: 400px
+                    height: 300px
+                    background-image: url("photo/colorsmoke.png")
+                    background-size: 100% 100%
+
+                #aboutus
+                    width: 400px
+                    height: 300px
+                    background-image: url("photo/colorsmoke.png")
+                    background-size: 100% 100%
+
+                button
+                    margin: 124px 0 0 144px
+                    @include button
+                    
+
+        @media only screen and (max-width: 400px)
+            #actions
+                width: 100%
+                display: grid
+                grid-template-columns: auto
+                justify-content: center
+                grid-gap: 10%
+                margin-top: 50px
+            
+            #buynow
+                width: 250px
+                height: 200px
+                background-image: url("photo/colorsmoke.png")
+                background-size: 100% 100%
+            
+            #aboutus
+                width: 250px
+                height: 200px
+                background-image: url("photo/colorsmoke.png")
+                background-size: 100% 100%
+
+            button
+                margin: 72px 0 0 72px 
+                @include button
+
+    
+    @include footer

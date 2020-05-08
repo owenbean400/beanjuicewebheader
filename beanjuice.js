@@ -3,11 +3,12 @@ var dm = 352
 var pm = 198
 var m = 0
 var styleSheet = document.createElement("style")
+var widthscreen = 768
 
 window.onload = function marginsett() {
     {
 
-        if(window.innerWidth > 880){
+        if(window.innerWidth > widthscreen){
         n = -60;
         document.getElementById("shopview").style.marginLeft = n;
         console.log("desktop");
@@ -36,7 +37,7 @@ window.onload = function marginsett() {
 }
 
 window.addEventListener("resize", function(){
-    if(window.innerWidth > 880){
+    if(window.innerWidth > widthscreen){
     n = -60;
     m = 0
     document.getElementById("shopview").style.marginLeft = n;
@@ -66,7 +67,7 @@ window.addEventListener("resize", function(){
 
 
 function slideright() {
-    if(window.innerWidth > 880){
+    if(window.innerWidth > widthscreen){
         if(window.innerWidth > 1719 && n > -764){
             document.getElementById("shopview").style.marginLeft = n-dm;
             n = n-dm;
@@ -83,7 +84,7 @@ function slideright() {
             console.log("DENIAL");
         }   
     }
-    else if (window.innerWidth < 880){
+    else if (window.innerWidth < widthscreen){
         if((window.innerWidth > 600) && n > -802){
             document.getElementById("shopview").style.marginLeft = n-pm;
             n = n-pm;
@@ -102,7 +103,7 @@ function slideright() {
 }
 
 function slideleft() {
-    if(window.innerWidth > 880){
+    if(window.innerWidth > widthscreen){
         if(n < -61){
             document.getElementById("shopview").style.marginLeft = n+dm;
             n = n+dm;
@@ -111,7 +112,7 @@ function slideleft() {
             console.log("DENIAL");
         }
     }
-    else if(window.innerWidth < 880){
+    else if(window.innerWidth < widthscreen){
         if(n < -11){
             document.getElementById("shopview").style.marginLeft = n+pm;
             n = n+pm;
@@ -126,7 +127,7 @@ function slideleft() {
 }
 
 function sprayright(){
-    if(window.innerWidth < 880){
+    if(window.innerWidth < widthscreen){
         if(m>-448){
             document.getElementById('slide').style.marginLeft = m - 224;
             m = m - 224;
@@ -141,7 +142,7 @@ function sprayright(){
 }
 
 function sprayleft(){
-    if(window.innerWidth < 880){
+    if(window.innerWidth < widthscreen){
         if(m<0){
             document.getElementById('slide').style.marginLeft = m + 224;
             m = m + 224;
