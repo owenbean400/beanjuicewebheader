@@ -56,8 +56,8 @@
     <header>                                                                     <!--section 1-->
         <h2 class="headtext">Scent Yourself</h2>                                   
         <section>
-            <img id="right" onclick="sprayright()" src="photo/arrowright-03.png"/>
-            <img id="left" onclick="sprayleft()" src="photo/arrowleft-03-03.png"/>
+            <img id="right" onclick="sprayMoveRight()" src="photo/arrowright-03.png"/>
+            <img id="left" onclick="sprayMoveLeft()" src="photo/arrowleft-03-03.png"/>
         </section>
         <div class="displayimg">
             <div id="slide">
@@ -75,7 +75,7 @@
     </article>
         <h3 id="shoptext">Shop the Collection</h3>
     <div id="moveholder">
-        <img class="left" onclick="slideleft()" src="photo/arrowleft-03-03.png"/>
+        <img class="left" onclick="slideMoveLeft()" src="photo/arrowleft-03-03.png"/>
     <article id="shop">                                                          <!--item sale showcase-->
             
         <div id="shopview">
@@ -118,7 +118,7 @@
     </div>
     
     </article>
-    <img class="right" src="photo/arrowright-03.png" onclick="slideright()"/>
+    <img class="right" src="photo/arrowright-03.png" onclick="slideMoveRight()"/>
 </div>
     <article id="actions">                                                       <!--buynow and email link-->
         <div id="buynow">
@@ -130,7 +130,7 @@
     </article>
     </main>
     <div id="subscribe">
-    <button type="submit" form="emailform" value="emailAddress">Email Subscription</button>
+    <button type="submit" form="emailform" value="emailAddress">Email</button>
     <form id="emailform" onsubmit="return false">
         <input type="email" id="email" name="email" placeholder="Email Address Here">
     </form>

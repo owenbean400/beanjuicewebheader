@@ -1,157 +1,93 @@
 var n = -60
 var dm = 352
-var pm = 198
-var m = 0
-var styleSheet = document.createElement("style")
-var widthscreen = 768
+var sprayMoveAmount = 224
+var sprayMarginLeft = 0
+var sprayBottleAmount = 3
+var slideMoveAmountPhone = 198
+var slideMoveAmountDesk = 352
+var slideMarginLeft = 0
+var slideMaxWidthPhone = 1000
+var slideMaxWidthDesk = 1448
+var phoneWidthScreen = 768
 
-window.onload = function marginsett() {
-    {
+window.addEventListener('resize', fixMarginDesktop);
+window.addEventListener('load', setUpStart);
 
-        if(window.innerWidth > widthscreen){
-        n = -60;
-        document.getElementById("shopview").style.marginLeft = n;
-        console.log("desktop");
-            document.getElementById('slide').style.display = "grid";
-            document.getElementById('slide').style.gridTemplateColumns = "auto auto auto";
-            document.getElementById('slide').style.gridGap = "10%";
-            document.getElementById('slide').style.justifyContent = "center";
-            document.getElementById('slide').style.width = "99%" ;
-            document.getElementById('slide').style.marginTop = "-560px";
-            document.getElementById('slide').style.zIndex = "1";
-            document.getElementById('slide').style.height = "701px";
-            document.getElementById('slide').style.overflow = "hidden";
-        }
-        else{
-        n = -10;
-        document.getElementById("shopview").style.marginLeft = n;
-        console.log("phone");
-            document.getElementById('slide').style.display = "block";
-            document.getElementById('slide').style.width = "1000px" ;
-            document.getElementById('slide').style.marginTop = "0";
-            document.getElementById('slide').style.zIndex = "0";
-            document.getElementById('slide').style.height = "auto";
-            document.getElementById('slide').style.overflow = "hidden";
-        }
-      }
-}
-
-window.addEventListener("resize", function(){
-    if(window.innerWidth > widthscreen){
-    n = -60;
-    m = 0
-    document.getElementById("shopview").style.marginLeft = n;
-    document.getElementById('slide').style.marginLeft = m;
-        document.getElementById('slide').style.display = "grid";
-        document.getElementById('slide').style.gridTemplateColumns = "auto auto auto";
-        document.getElementById('slide').style.gridGap = "10%";
-        document.getElementById('slide').style.justifyContent = "center";
-        document.getElementById('slide').style.width = "99%" ;
-        document.getElementById('slide').style.marginTop = "-560px";
-        document.getElementById('slide').style.zIndex = "1";
-        document.getElementById('slide').style.height = "701px";
-        document.getElementById('slide').style.overflow = "hidden";
-    }
-    else{
-    n = -10;
-    document.getElementById("shopview").style.marginLeft = n;
-    document.getElementById('slide').style.marginLeft = m;
-        document.getElementById('slide').style.display = "block";
-        document.getElementById('slide').style.width = "1000px" ;
-        document.getElementById('slide').style.marginTop = "0";
-        document.getElementById('slide').style.zIndex = "0";
-        document.getElementById('slide').style.height = "auto";
-        document.getElementById('slide').style.overflow = "hidden";
-    }
-  });
-
-
-function slideright() {
-    if(window.innerWidth > widthscreen){
-        if(window.innerWidth > 1719 && n > -764){
-            document.getElementById("shopview").style.marginLeft = n-dm;
-            n = n-dm;
-        }
-        else if((window.innerWidth > 1319 && window.innerWidth < 1719) && n > -1116){
-            document.getElementById("shopview").style.marginLeft = n-dm;
-            n = n-dm;
-        }
-        else if((window.innerWidth > 800 && window.innerWidth < 1320) && n > -1468){
-            document.getElementById("shopview").style.marginLeft = n-dm;
-            n = n-dm;
-        }
-        else{
-            console.log("DENIAL");
-        }   
-    }
-    else if (window.innerWidth < widthscreen){
-        if((window.innerWidth > 600) && n > -802){
-            document.getElementById("shopview").style.marginLeft = n-pm;
-            n = n-pm;
-        }
-        else if((window.innerWidth > 0 && window.innerWidth < 600) && n > -1000){
-            document.getElementById("shopview").style.marginLeft = n-pm;
-            n = n-pm;
-        }
-        else{
-            console.log("DENIAL");
-        }
-    }
-    else{
-        console.log("DENIAL");
+function sprayMoveLeft(){
+    if(window.innerWidth < phoneWidthScreen && sprayMarginLeft < 0){
+        document.getElementById('slide').style.marginLeft = sprayMarginLeft + sprayMoveAmount + "px";
+        sprayMarginLeft += sprayMoveAmount;
     }
 }
 
-function slideleft() {
-    if(window.innerWidth > widthscreen){
-        if(n < -61){
-            document.getElementById("shopview").style.marginLeft = n+dm;
-            n = n+dm;
-        }
-        else{
-            console.log("DENIAL");
-        }
-    }
-    else if(window.innerWidth < widthscreen){
-        if(n < -11){
-            document.getElementById("shopview").style.marginLeft = n+pm;
-            n = n+pm;
-        }
-        else{
-            console.log("DENIAL");
-        }
-    }
-    else{
-        console.log("DENIAL");
+function sprayMoveRight(){
+    if(window.innerWidth < phoneWidthScreen && (sprayMarginLeft > (-1 * (sprayMoveAmount * (sprayBottleAmount - 1))))){
+        document.getElementById('slide').style.marginLeft = sprayMarginLeft - sprayMoveAmount + "px";
+        sprayMarginLeft -= sprayMoveAmount;
     }
 }
 
-function sprayright(){
-    if(window.innerWidth < widthscreen){
-        if(m>-448){
-            document.getElementById('slide').style.marginLeft = m - 224;
-            m = m - 224;
+function slideMoveRight(){
+        if(window.innerWidth < phoneWidthScreen && slideMarginLeft > (slideMaxWidthPhone * -1)){
+            document.getElementById('shopview').style.marginLeft = slideMarginLeft - slideMoveAmountPhone + "px";
+            slideMarginLeft -= slideMoveAmountPhone;
+        }
+        else if(window.innerWidth > phoneWidthScreen && slideMarginLeft > (slideMaxWidthDesk * -1)){
+            document.getElementById('shopview').style.marginLeft = slideMarginLeft - slideMoveAmountDesk + "px";
+            slideMarginLeft -= slideMoveAmountDesk;
+        } 
+}
+
+function slideMoveLeft(){
+    if(slideMarginLeft < -50){
+        if(window.innerWidth < phoneWidthScreen){
+            document.getElementById('shopview').style.marginLeft = slideMarginLeft + slideMoveAmountPhone + "px";
+            slideMarginLeft += slideMoveAmountPhone;
         }
         else{
-            console.log("DENIAL")
-        }
+            document.getElementById('shopview').style.marginLeft = slideMarginLeft + slideMoveAmountDesk + "px";
+            slideMarginLeft += slideMoveAmountDesk;
+        } 
+    }
+    
+}
+
+function setUpStart(){
+    if(window.innerWidth < phoneWidthScreen){
+        slideMarginLeft = -10;
     }
     else{
-        console.log("DENIAL")
+        slideMarginLeft = -40;
+        if(window.innerWidth < 1320){   
+            slideMaxWidthDesk = 1448;
+        }
+        else if(window.innerWidth > 1320 && window.innerWidth < 1720){
+            slideMaxWidthDesk = 1096;
+        }
+        else{
+            slideMaxWidthDesk = 744;
+        }
     }
 }
 
-function sprayleft(){
-    if(window.innerWidth < widthscreen){
-        if(m<0){
-            document.getElementById('slide').style.marginLeft = m + 224;
-            m = m + 224;
+function fixMarginDesktop() {
+    if(window.innerWidth > phoneWidthScreen){
+        sprayMarginLeft = 0;
+        document.getElementById('slide').style.marginLeft = sprayMarginLeft + "px";
+        slideMarginLeft = -40;
+        document.getElementById('shopview').style.marginLeft = slideMarginLeft + "px";
+        if(window.innerWidth < 1320){   
+            slideMaxWidthDesk = 1448;
+        }
+        else if(window.innerWidth > 1320 && window.innerWidth < 1720){
+            slideMaxWidthDesk = 1096;
         }
         else{
-            console.log("DENIAL")
+            slideMaxWidthDesk = 744;
         }
     }
-    else{
-        console.log("DENIAL")
+    else if(window.innerWidth < phoneWidthScreen){
+        slideMarginLeft = -10;
+        document.getElementById('shopview').style.marginLeft = slideMarginLeft + "px";
     }
 }
