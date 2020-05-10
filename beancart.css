@@ -1,8 +1,6 @@
 body {
   margin: 0;
   padding: 0;
-  width: 100%;
-  background-color: #eee;
   font-family: helvetica, Arial, sans-serif;
 }
 body nav a {
@@ -202,290 +200,74 @@ body nav a {
   }
 }
 body main {
-  margin: 64px 0 0 0;
+  margin: 128px 0 0 0;
 }
-@media only screen and (min-width: 992px) {
-  body main .container {
-    display: grid;
-    grid-template-columns: 600px auto;
-    grid-template-rows: auto;
-    justify-content: center;
-    grid-gap: 2%;
-  }
-  body main .container .containerleft {
-    width: 600px;
-    float: left;
-    display: grid;
-    grid-template-columns: 500px;
-    grid-template-rows: 300px 100px;
-    grid-gap: 32px;
-    justify-content: center;
-    margin: 64px 0;
-  }
-  body main .container .containerleft #displayimg {
-    background-color: #555;
-    height: 300px;
-    width: 500px;
-  }
-  body main .container .containerleft .imgcontainer {
-    width: 500px;
-    display: grid;
-    grid-template-columns: 50px 50px 50px 50px 50px;
-    grid-template-rows: 50px;
-    grid-gap: 16px;
-    justify-content: space-between;
-    align-items: center;
-  }
-  body main .container .containerleft .imgcontainer .imgslide {
-    background-color: #555;
-    height: 30px;
-    width: 50px;
-    cursor: pointer;
-  }
-  body main .container .containerleft .imgcontainer .imgslide:hover {
-    border-bottom: solid 2px #232323;
-  }
-  body main .container .containerright {
-    width: 100%;
-    float: left;
-    margin: 32px 0;
-  }
-  body main .container .containerright h1 {
-    font-size: 48px;
-    margin: 32px 0 0 0;
-  }
-  body main .container .containerright h3 {
-    font-size: 24px;
-    margin: 16px 0 0 0;
-  }
-  body main .container .containerright p {
+body main table {
+  width: 75%;
+  margin: auto;
+}
+@media only screen and (min-width: 768px) {
+  body main table {
     font-size: 16px;
-    margin: 32px 20% 0 0;
-  }
-  body main .container .containerright button {
-    margin: 32px 0 0 0;
-  }
-}
-@media only screen and (min-width: 992px) and (min-width: 992px) {
-  body main .container .containerright button {
-    border: none;
-    color: #eeeeee;
-    background-color: #232323;
-    width: 200px;
-    height: 100px;
-    font-size: 24px;
-    border-radius: 16px;
-  }
-  body main .container .containerright button:hover {
-    background-color: #444;
-    color: white;
-    cursor: pointer;
-  }
-  body main .container .containerright button:active {
-    background-color: #555;
-  }
-}
-@media only screen and (min-width: 992px) and (max-width: 992px) {
-  body main .container .containerright button {
-    border: none;
-    color: #eeeeee;
-    background-color: #232323;
-    width: 100px;
-    height: 50px;
-    font-size: 16px;
-    border-radius: 8px;
-  }
-  body main .container .containerright button:hover {
-    background-color: #444;
-    color: white;
-    cursor: pointer;
-  }
-  body main .container .containerright button:active {
-    background-color: #555;
-  }
-}
-@media only screen and (min-width: 768px) and (max-width: 992px) {
-  body main .container {
-    display: grid;
-    grid-template-columns: 440px auto;
-    grid-template-rows: auto;
-    justify-content: space-between;
-  }
-  body main .container .containerleft {
-    width: 440px;
-    float: left;
-    display: grid;
-    grid-template-columns: 400px;
-    grid-template-rows: 240px 30px;
-    grid-gap: 32px;
-    justify-content: center;
-    margin: 64px 0;
-  }
-  body main .container .containerleft #displayimg {
-    background-color: #555;
-    height: 240px;
-    width: 400px;
-  }
-  body main .container .containerleft .imgcontainer {
-    width: 400px;
-    display: grid;
-    grid-template-columns: 50px 50px 50px 50px 50px;
-    grid-template-rows: 30px;
-    grid-gap: 8px;
-    justify-content: space-between;
-    align-items: center;
-  }
-  body main .container .containerleft .imgcontainer .imgslide {
-    background-color: #555;
-    height: 30px;
-    width: 50px;
-    cursor: pointer;
-  }
-  body main .container .containerright {
-    width: 100%;
-    float: left;
-    margin: 32px 0;
-  }
-  body main .container .containerright h1 {
-    font-size: 48px;
-    margin: 32px 0 0 0;
-  }
-  body main .container .containerright h3 {
-    font-size: 24px;
-    margin: 16px 0 0 0;
-  }
-  body main .container .containerright p {
-    font-size: 16px;
-    margin: 32px 20% 0 0;
-  }
-  body main .container .containerright button {
-    margin: 32px 0 0 0;
-  }
-}
-@media only screen and (min-width: 768px) and (max-width: 992px) and (min-width: 992px) {
-  body main .container .containerright button {
-    border: none;
-    color: #eeeeee;
-    background-color: #232323;
-    width: 200px;
-    height: 100px;
-    font-size: 24px;
-    border-radius: 16px;
-  }
-  body main .container .containerright button:hover {
-    background-color: #444;
-    color: white;
-    cursor: pointer;
-  }
-  body main .container .containerright button:active {
-    background-color: #555;
-  }
-}
-@media only screen and (min-width: 768px) and (max-width: 992px) and (max-width: 992px) {
-  body main .container .containerright button {
-    border: none;
-    color: #eeeeee;
-    background-color: #232323;
-    width: 100px;
-    height: 50px;
-    font-size: 16px;
-    border-radius: 8px;
-  }
-  body main .container .containerright button:hover {
-    background-color: #444;
-    color: white;
-    cursor: pointer;
-  }
-  body main .container .containerright button:active {
-    background-color: #555;
   }
 }
 @media only screen and (max-width: 768px) {
-  body main .container {
-    margin: 0;
-    padding: 0;
-    width: 100%;
+  body main table {
+    font-size: 12px;
   }
-  body main .container .containerleft {
-    margin: 0;
-    padding: 0;
-    width: 100%;
+}
+body main table th {
+  text-align: left;
+}
+@media only screen and (min-width: 768px) {
+  body main table th {
+    padding-left: 16px;
+    margin-bottom: 16px;
   }
-  body main .container .containerleft #displayimg {
-    background-color: #555;
-    width: 100%;
-    height: auto;
-    margin-bottom: 32px;
+}
+@media only screen and (max-width: 768px) {
+  body main table th {
+    padding-left: 6px;
+    margin-bottom: 12px;
   }
-  body main .container .containerleft .imgcontainer {
-    display: grid;
-    grid-template-columns: 50px 50px 50px 50px 50px;
-    grid-template-rows: 30px;
-    justify-content: space-around;
+}
+body main table tr {
+  border: black 1px solid;
+}
+body main table td {
+  margin: -1px;
+}
+@media only screen and (min-width: 768px) {
+  body main table td {
+    padding: 16px;
   }
-  body main .container .containerleft .imgcontainer .imgslide {
-    background-color: #555;
-    width: 50px;
-    height: 30px;
-    cursor: pointer;
+}
+@media only screen and (max-width: 768px) {
+  body main table td {
+    padding: 6px;
   }
-  body main .container .containerright {
+}
+body main table .delete {
+  color: red;
+  cursor: pointer;
+}
+@media only screen and (min-width: 768px) {
+  body main table .tableimg {
+    height: 60px;
+    margin: auto;
     text-align: center;
-    margin-top: 64px;
-  }
-  body main .container .containerright h1 {
-    font-size: 32px;
-    margin: 0;
-  }
-  body main .container .containerright h3 {
-    font-size: 16px;
-    margin: 8px 0 0 0;
-  }
-  body main .container .containerright p {
-    font-size: 16px;
-    margin: 32px 0 0 0;
-  }
-  body main .container .containerright button {
-    margin: 32px 0 0 0;
   }
 }
-@media only screen and (max-width: 768px) and (min-width: 992px) {
-  body main .container .containerright button {
-    border: none;
-    color: #eeeeee;
-    background-color: #232323;
-    width: 200px;
-    height: 100px;
-    font-size: 24px;
-    border-radius: 16px;
-  }
-  body main .container .containerright button:hover {
-    background-color: #444;
-    color: white;
-    cursor: pointer;
-  }
-  body main .container .containerright button:active {
-    background-color: #555;
+@media only screen and (max-width: 768px) {
+  body main table .tableimg {
+    height: 30px;
+    margin: auto;
+    text-align: center;
   }
 }
-@media only screen and (max-width: 768px) and (max-width: 992px) {
-  body main .container .containerright button {
-    border: none;
-    color: #eeeeee;
-    background-color: #232323;
-    width: 100px;
-    height: 50px;
-    font-size: 16px;
-    border-radius: 8px;
-  }
-  body main .container .containerright button:hover {
-    background-color: #444;
-    color: white;
-    cursor: pointer;
-  }
-  body main .container .containerright button:active {
-    background-color: #555;
-  }
+body main #payment {
+  margin: 64px auto 0 auto;
+  width: 180px;
 }
 body a {
   text-decoration: none;
@@ -839,148 +621,5 @@ body a {
 body footer {
   padding: 32px 0 0 0;
 }
-body #amount {
-  position: fixed;
-  background-color: #555;
-  z-index: 1;
-  top: -300px;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  -webkit-box-shadow: 4px 4px 32px 5px rgba(0, 0, 0, 0.25);
-  -moz-box-shadow: 4px 4px 32px 5px rgba(0, 0, 0, 0.25);
-  box-shadow: 4px 4px 32px 5px rgba(0, 0, 0, 0.25);
-  border-radius: 16px;
-  transition: top 0.33s;
-}
-@media only screen and (min-width: 768px) {
-  body #amount {
-    display: grid;
-    grid-template-columns: auto;
-    grid-template-areas: auto auto auto auto auto;
-    grid-gap: 32px;
-    justify-content: center;
-    padding: 32px 80px 64px 80px;
-  }
-}
-@media only screen and (max-width: 768px) {
-  body #amount {
-    display: grid;
-    grid-template-columns: auto;
-    grid-template-areas: auto auto auto auto auto;
-    grid-gap: 32px;
-    justify-content: center;
-    width: 100%;
-    max-width: 600px;
-    padding: 32px 0 64px 0;
-  }
-}
-body #amount #qtybuttoncontainer {
-  display: grid;
-}
-@media only screen and (min-width: 768px) {
-  body #amount #qtybuttoncontainer {
-    grid-template-columns: auto auto;
-    grid-template-areas: auto;
-    grid-gap: 64px;
-  }
-}
-@media only screen and (max-width: 768px) {
-  body #amount #qtybuttoncontainer {
-    grid-template-columns: auto;
-    grid-template-areas: auto auto;
-    grid-gap: 16px;
-  }
-}
-body #amount #qtybuttoncontainer button {
-  margin: auto;
-}
-@media only screen and (min-width: 992px) {
-  body #amount #qtybuttoncontainer button {
-    border: none;
-    color: #eeeeee;
-    background-color: #232323;
-    width: 200px;
-    height: 100px;
-    font-size: 24px;
-    border-radius: 16px;
-  }
-  body #amount #qtybuttoncontainer button:hover {
-    background-color: #444;
-    color: white;
-    cursor: pointer;
-  }
-  body #amount #qtybuttoncontainer button:active {
-    background-color: #555;
-  }
-}
-@media only screen and (max-width: 992px) {
-  body #amount #qtybuttoncontainer button {
-    border: none;
-    color: #eeeeee;
-    background-color: #232323;
-    width: 100px;
-    height: 50px;
-    font-size: 16px;
-    border-radius: 8px;
-  }
-  body #amount #qtybuttoncontainer button:hover {
-    background-color: #444;
-    color: white;
-    cursor: pointer;
-  }
-  body #amount #qtybuttoncontainer button:active {
-    background-color: #555;
-  }
-}
-body #amount #qtyimg {
-  margin: auto;
-}
-@media only screen and (min-width: 768px) {
-  body #amount #qtyimg {
-    height: 200px;
-  }
-}
-@media only screen and (max-width: 768px) {
-  body #amount #qtyimg {
-    height: 100px;
-  }
-}
-body #amount h4 {
-  margin: auto;
-  padding: 0;
-  color: #eee;
-  text-align: center;
-}
-@media only screen and (min-width: 992px) {
-  body #amount h4 {
-    font-size: 48px;
-  }
-}
-@media only screen and (max-width: 992px) {
-  body #amount h4 {
-    font-size: 32px;
-  }
-}
-body #amount #quantitycontainer {
-  margin: auto;
-  display: grid;
-  grid-template-columns: auto auto;
-  grid-template-areas: auto;
-  grid-gap: 16px;
-}
-body #amount #quantitycontainer label {
-  margin: 0;
-  padding: 0;
-  font-size: 24px;
-}
-body #amount #quantitycontainer input {
-  margin: 0;
-  padding: 0;
-  color: #232323;
-  background-color: #eee;
-  border: none;
-  border-radius: 8px;
-  padding-left: 6px;
-}
 
-/*# sourceMappingURL=product.css.map */
+/*# sourceMappingURL=beancart.css.map */

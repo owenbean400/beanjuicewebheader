@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="home.css" rel="stylesheet"/>
-    <script src="beanjuice.js"></script>
+    <link href="beancart.css" rel="stylesheet"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="beanmaster.js"></script>
+    <script src="beancart.js"></script>
 	<link rel="shortcut icon" href="ogblogo/favicon.ico" type="image/x-icon" />
     <link rel="apple-touch-icon" href="ogblogo/apple-touch-icon.png" />
     <link rel="apple-touch-icon" sizes="57x57" href="ogblogo/apple-touch-icon-57x57.png" />
@@ -53,88 +54,29 @@
 
     </nav>                                                                       <!-- NavBar End -->
     <main>
-    <header>                                                                     <!--section 1-->
-        <h2 class="headtext">Scent Yourself</h2>                                   
-        <section>
-            <img id="right" onclick="sprayMoveRight()" src="photo/arrowright-03.png"/>
-            <img id="left" onclick="sprayMoveLeft()" src="photo/arrowleft-03-03.png"/>
-        </section>
-        <div class="displayimg">
-            <div id="slide">
-                <a href="speeddemon.html"><img src="photo/redcanweb.png" class="sprayimg" /></a>
-                <a href="sunshine.html"><img src="photo/yellowcanweb.png" class="sprayimg" /></a>
-                <a href="icy.html"><img src="photo/bluecanweb.png" class="sprayimg" /></a>
-            </div>
-        </div>
-    </header>
-    <article id="quizquestion">                                                  <!--quiz box-->    
-        <div id="quizquestionbox"><h3>What's <br> Your <br> Smell?</h3>
-            <button>Quiz</button>
-        </div>
-        <img id="quizphoto" src="photo/magicspray.png"/>
-    </article>
-        <h3 id="shoptext">Shop the Collection</h3>
-    <div id="moveholder">
-        <img class="left" onclick="slideMoveLeft()" src="photo/arrowleft-03-03.png"/>
-    <article id="shop">                                                          <!--item sale showcase-->
-            
-        <div id="shopview">
-        <a href="speeddemon.html"><div class="item redbg" onclick="redPage()">
-            <h5>Speed Demon</h5>
-            <h6>Bean Juice</h6>
-            <img class="shopspray" src="photo/redcanweb.png"/>
-            <p>$12.99</p>
-        </div></a>
-        <a href="sunshine.html"><div class="item yellowbg" onclick="yellowPage()">
-            <h5>Ray of Sunshine</h5>
-            <h6>Bean Juice</h6>
-            <img class="shopspray" src="photo/yellowcanweb.png"/>
-            <p>$12.99</p>
-        </div></a>
-        <a href="icy.html"><div class="item bluebg" onclick="bluePage()">
-            <h5>Icy Icicles</h5>
-            <h6>Bean Juice</h6>
-            <img class="shopspray" src="photo/bluecanweb.png"/>
-            <p>$12.99</p>
-        </div></a>
-        <a href="speeddemon.html"><div class="item redbg" onclick="redPage()">
-            <h5>Speed Demon</h5>
-            <h6>Bean Juice</h6>
-            <img class="shopspray" src="photo/redcanweb.png"/>
-            <p>$12.99</p>
-        </div></a>
-        <a href="sunshine.html"><div class="item yellowbg" onclick="yellowPage()">
-            <h5>Ray of Sunshine</h5>
-            <h6>Bean Juice</h6>
-            <img class="shopspray" src="photo/yellowcanweb.png"/>
-            <p>$12.99</p>
-        </div></a>
-        <a href="icy.html"><div class="item bluebg" onclick="bluePage()">
-            <h5>Icy Icicles</h5>
-            <h6>Bean Juice</h6>
-            <img class="shopspray" src="photo/bluecanweb.png"/>
-            <p>$12.99</p>
-        </div></a>
-    </div>
-    
-    </article>
-    <img class="right" src="photo/arrowright-03.png" onclick="slideMoveRight()"/>
-</div>
-    <article id="actions">                                                       <!--buynow and email link-->
-        <div id="buynow">
-            <a href="products.html"><button>Shop Now</button></a>
-        </div>
-        <div id="aboutus">
-            <button>About Us</button>
-        </div>
-    </article>
+        <table>
+            <tr>
+                <th> </th>
+                <th> Quantity</th>
+                <th> Name</th>
+                <th> Price</th>
+            </tr>
+        </table>
+        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top" id="payment">
+            <input type="hidden" name="cmd" value="_xclick">
+            <input type="hidden" name="business" value="oweniswaytoogood@gmail.com">
+            <input type="hidden" name="lc" value="US">
+            <input type="hidden" name="item_name" value="Bean Juice">
+            <input type="hidden" name="button_subtype" value="services">
+            <input type="hidden" name="no_note" value="0">
+            <input type="hidden" name="currency_code" value="USD">
+            <input type="hidden" name="tax_rate" value="5.500">
+            <input type="hidden" name="bn" value="PP-BuyNowBF:btn_buynowCC_LG.gif:NonHostedGuest">
+            <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+            <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+        </form>
+        
     </main>
-    <div id="subscribe">
-    <button type="submit" form="emailform" value="emailAddress">Email</button>
-    <form id="emailform" onsubmit="return false">
-        <input type="email" id="email" name="email" placeholder="Email Address Here">
-    </form>
-    </div>
     <footer>
         <ol>
             <a href="products.html"><li class="toplist">Products</li></a>
@@ -169,5 +111,3 @@
         </ol>
     </footer>
     <p id="copyright">Copyright © 2020 BeanJuice Inc. All rights reserved.</p>
-
-</body>

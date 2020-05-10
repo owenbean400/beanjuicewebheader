@@ -134,7 +134,7 @@ var data = {
             data.sunshine.qty = value;
             sessionStorage.setItem("sunshine", data.sunshine.name + data.sunshine.qty);
         }
-        else{
+        else if(display == 2){
             let oldValue = sessionStorage.getItem("icy").match(/\d+$/g)[0];
             oldValue = parseInt(oldValue, 10);
             newValue = parseInt(newValue, 10);
