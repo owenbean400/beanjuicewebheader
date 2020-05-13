@@ -37,7 +37,7 @@ $(function(){
         }
         $(this).parent().remove();
         $("[id='quantity']").text(qty);
-        $("[id='price']").text("$" + (qty * 12.99));
+        $("[id='price']").text("$" + (qty * 12.99).toFixed(2));
         cartAmount();
         deleteTableHead();
 
@@ -82,7 +82,7 @@ function createTable(){
         $("tr:last").append("<td>" + qty + "</td>");
         $('td:last').attr('id', 'quantity');
         $("tr:last").append("<td> </td>");
-        $("tr:last").append("<td>" + "$" + (qty * 12.99) + "</td>");
+        $("tr:last").append("<td>" + "$" + (qty * 12.99).toFixed(2) + "</td>");
         $('td:last').attr('id', 'price');
     }
     $("table").find("img").addClass("tableimg");

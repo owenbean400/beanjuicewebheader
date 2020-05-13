@@ -40,7 +40,6 @@ body nav a {
   body nav #navmid {
     width: 100%;
     clear: both;
-    transition: opacity 0.2s;
   }
   body nav #navmid ol {
     background-color: #333;
@@ -111,7 +110,7 @@ body nav a {
     background-color: #ddd;
     color: #232323;
     text-align: center;
-    padding-top: 4px;
+    padding-top: 0px;
     border-radius: 100%;
     top: 12px;
     right: 16px;

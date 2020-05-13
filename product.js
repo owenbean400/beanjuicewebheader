@@ -99,7 +99,12 @@ var data = {
     }
 
     function back(){
-        if(qtynow = document.getElementById('quantity').value >= 0 && document.getElementById('quantity').value < 6){
+        if((qtynow = document.getElementById('quantity').value > 0) && (document.getElementById('quantity').value < 6)){
+            document.getElementById('amount').style.top = "-300px";
+            qtyChange();
+            console.log("continue");
+        }
+        else if(qtynow = document.getElementById('quantity').value === "0"){
             document.getElementById('amount').style.top = "-300px";
             qtyChange();
         }
@@ -109,6 +114,7 @@ var data = {
         }
         else{
             alert("Please choose a positive number");
+            console.log("no");
         }
     }
 
