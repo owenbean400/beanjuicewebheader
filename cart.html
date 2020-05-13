@@ -3,8 +3,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="beancart.css" rel="stylesheet"/>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="beanmaster.js"></script>
     <script src="beancart.js"></script>
+    <script src="beanmaster.js"></script>
 	<link rel="shortcut icon" href="ogblogo/favicon.ico" type="image/x-icon" />
     <link rel="apple-touch-icon" href="ogblogo/apple-touch-icon.png" />
     <link rel="apple-touch-icon" sizes="57x57" href="ogblogo/apple-touch-icon-57x57.png" />
@@ -17,7 +17,7 @@
     <link rel="apple-touch-icon" sizes="180x180" href="ogblogo/apple-touch-icon-180x180.png" />
     <title>Bean Juice</title>
 </head>
-<body>
+<body onload="loading();">
     <nav>                                                                        <!-- NavBar Start -->
         <a href="index.html"><img src="photo/logo-01.png" id="navlogo"></a>
         <img src="photo/hamburger-02.png" id="hamburger">
@@ -33,8 +33,8 @@
             <ol aria-haspopup="true" role="button" tabIndex="0">
                 <li class="navhead">About</li>
                 <div class="hidden">
-                    <li class="navselect">About Company</li>
-                    <li class="navselect">About Products</li>
+                    <li class="navselect">Company</li>
+                    <li class="navselect">Products</li>
                 </div>
             </ol>
             <ol aria-haspopup="true" role="button" tabIndex="0">
@@ -62,7 +62,7 @@
                 <th> Price</th>
             </tr>
         </table>
-        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top" id="payment">
+        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top" id="payment" style="display:none">
             <input type="hidden" name="cmd" value="_xclick">
             <input type="hidden" name="business" value="oweniswaytoogood@gmail.com">
             <input type="hidden" name="lc" value="US">
