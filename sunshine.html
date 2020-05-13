@@ -3,6 +3,7 @@
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="product.css" rel="stylesheet" type="text/css"/>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="beanmaster.js"></script>
         <script src="product.js"></script>
         <link rel="shortcut icon" href="ogblogo/favicon.ico" type="image/x-icon" />
@@ -17,7 +18,7 @@
         <link rel="apple-touch-icon" sizes="180x180" href="ogblogo/apple-touch-icon-180x180.png" />
         <title>Bean Juice</title>
     </head>
-    <body onload="display = 1; cartAmount();">
+    <body onload="display = 1; cartAmount(); loading();">
         <nav>                                                                        <!-- NavBar Start -->
             <a href="index.html"><img src="photo/logo-01.png" id="navlogo"></a>
             <img src="photo/hamburger-02.png" id="hamburger">
@@ -33,8 +34,8 @@
                 <ol aria-haspopup="true" role="button" tabIndex="0">
                     <li class="navhead">About</li>
                     <div class="hidden">
-                        <li class="navselect">About Company</li>
-                        <li class="navselect">About Products</li>
+                        <li class="navselect">Company</li>
+                        <li class="navselect">Products</li>
                     </div>
                 </ol>
                 <ol aria-haspopup="true" role="button" tabIndex="0">

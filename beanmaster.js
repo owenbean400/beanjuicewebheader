@@ -1,65 +1,3 @@
-qtyCartNum();
-
-//load window    
-    window.onload = function loading() {
-
-//variables
-        const NAVLINKS = document.getElementById('navmid');
-        const HAMBURGER = document.getElementById('hamburger');
-        const CARTAMOUNT = document.getElementById('qty');
-        var showing = true;
-
-        cartAmount();
-
-//screen resized        
-        window.addEventListener("resize", function resized() {
-            if(window.innerWidth > 768){
-                NAVLINKS.style.display = 'block';
-                showing = 1;
-            }
-            else{
-                NAVLINKS.style.display = 'none';
-                showing = 0;
-            }
-        })
-
-//hamburger bar clicked        
-        HAMBURGER.addEventListener("click", function hamburgerChange() {
-            navChange();
-        })
-
-//changing whether to show links or not
-        function navChange() {
-            if(window.innerWidth < 768){
-                if(showing == false){
-                    NAVLINKS.style.display = "block";
-                    showing = 1;
-                }
-                else{
-                    NAVLINKS.style.display = "none";
-                    showing = 0;
-                }
-            }
-            else{
-                    NAVLINKS.style.display = 'block';
-                    showing = 1;
-            }
-        }
-    }
-
-//set value of what spray was clicked
-    function redPage(){
-        sessionStorage.setItem('color', 'red');
-    }
-
-    function bluePage(){
-        sessionStorage.setItem('color', 'blue');
-    }
-
-    function yellowPage(){
-        sessionStorage.setItem('color', 'yellow');
-    }
-
 //set value for images    
     var image = {
         red: {
@@ -84,22 +22,40 @@ qtyCartNum();
             five: "photo/product/blue5.jpg"
         }
     }
+//load window    
+    function loading() {
 
-    function qtyCartNum(){
-            if(!window.sessionStorage.getItem('qty')){
-                window.sessionStorage.setItem('qty', 0);
-                window.sessionStorage.setItem('demon', "demon0");
-                window.sessionStorage.setItem('sunshine', "sunshine0");
-                window.sessionStorage.setItem('icy', "sunshine0");
-            }
-            else{
-                window.sessionStorage.setItem('qty', window.sessionStorage.getItem('qty'));
-            }
+//variables
+        var showing = true;
+
+//function execute when page loads
+        qtyCartNum();
+        cartAmount();
+        $("#navmid").toggleClass("hiding");
+
+//screen resized        
+
+            $("#hamburger").click(function(){
+                $("#navmid").toggleClass("hiding");
+                
+            });
+
+}
+
+
+function qtyCartNum(){
+    if(!window.sessionStorage.getItem('qty')){
+        window.sessionStorage.setItem('qty', 0);
+        window.sessionStorage.setItem('demon', "demon0");
+        window.sessionStorage.setItem('sunshine', "sunshine0");
+        window.sessionStorage.setItem('icy', "sunshine0");
     }
-
-    
-    function cartAmount(){
-        document.getElementById('qty').innerHTML = sessionStorage.getItem('qty');
+    else{
+        window.sessionStorage.setItem('qty', window.sessionStorage.getItem('qty'));
     }
+}
 
-    
+
+function cartAmount(){
+    $("#qty").text(window.sessionStorage.getItem('qty'));
+}

@@ -8,6 +8,9 @@ body nav a {
   color: inital;
 }
 @media only screen and (max-width: 768px) {
+  body .hiding {
+    opacity: 0;
+  }
   body a.button {
     text-decoration: none;
     color: initial;
@@ -28,7 +31,7 @@ body nav a {
   }
   body nav #hamburger {
     float: right;
-    height: 48;
+    height: 48px;
     padding: 8px 9px 0 0;
   }
   body nav #hamburger:hover {
@@ -37,7 +40,7 @@ body nav a {
   body nav #navmid {
     width: 100%;
     clear: both;
-    display: none;
+    transition: opacity 0.2s;
   }
   body nav #navmid ol {
     background-color: #333;
@@ -141,7 +144,7 @@ body nav a {
     margin: auto;
   }
   body nav #navmid ol {
-    width: 190px;
+    width: 180px;
     float: left;
     text-decoration: none;
     list-style-type: none;
@@ -174,9 +177,9 @@ body nav a {
   }
   body nav #checkout {
     height: 64px;
-    width: 64px;
+    width: 48px;
     float: right;
-    margin: 0 24px 0 0;
+    margin: 0 16px 0 0;
     cursor: pointer;
   }
   body nav #checkout #cart {
