@@ -1,9 +1,10 @@
 <!DOCTYPE html>
+<html>
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="beancart.css" rel="stylesheet"/>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="beancart.js"></script>
+    <link href="quiz.css" rel="stylesheet"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="quiz.js"></script>
     <script src="beanmaster.js"></script>
 	<link rel="shortcut icon" href="ogblogo/favicon.ico" type="image/x-icon" />
     <link rel="apple-touch-icon" href="ogblogo/apple-touch-icon.png" />
@@ -17,7 +18,7 @@
     <link rel="apple-touch-icon" sizes="180x180" href="ogblogo/apple-touch-icon-180x180.png" />
     <title>Bean Juice</title>
 </head>
-<body onload="loading();">
+<body onload="loading()">
     <nav>                                                                        <!-- NavBar Start -->
         <a href="index.html"><img src="photo/logo-01.png" id="navlogo"></a>
         <img src="photo/hamburger-02.png" id="hamburger">
@@ -52,29 +53,28 @@
 
     </nav>                                                                       <!-- NavBar End -->
     <main>
-        <table>
-            <tr>
-                <th> </th>
-                <th> Quantity</th>
-                <th> Name</th>
-                <th> Price</th>
-            </tr>
-        </table>
-        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top" id="payment" style="display:none">
-            <input type="hidden" name="cmd" value="_xclick">
-            <input type="hidden" name="business" value="oweniswaytoogood@gmail.com">
-            <input type="hidden" name="lc" value="US">
-            <input type="hidden" name="item_name" value="Bean Juice">
-            <input type="hidden" name="button_subtype" value="services">
-            <input type="hidden" name="no_note" value="0">
-            <input type="hidden" name="currency_code" value="USD">
-            <input type="hidden" name="tax_rate" value="5.500">
-            <input type="hidden" name="bn" value="PP-BuyNowBF:btn_buynowCC_LG.gif:NonHostedGuest">
-            <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
-            <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
-        </form>
-        
+        <h1>Quiz</h1>
+        <div id="quizbox">
+            <h2>Question Input</h2>
+            <div id="buttonGrid">
+                <a><button class="answer">
+                    ans 1
+                </button></a>
+                <a><button class="answer">
+                    ans 2
+                </button></a>
+                <a><button class="answer">
+                    ans 3
+                </button></a>
+            </div>
+        </div>
     </main>
+    <div id="subscribe">
+    <button type="submit" form="emailform" value="emailAddress">Email</button>
+    <form id="emailform" onsubmit="return false">
+        <input type="email" id="email" name="email" placeholder="Email Address Here">
+    </form>
+    </div>
     <footer>
         <ol>
             <a href="products.html"><li class="toplist">Products</li></a>
@@ -109,3 +109,6 @@
         </ol>
     </footer>
     <p id="copyright">Copyright © 2020 BeanJuice Inc. All rights reserved.</p>
+
+</body>
+</html>
