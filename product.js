@@ -39,6 +39,37 @@ var data = {
 }
 
     qtyCartNum();
+    $(document).ready(function(){
+        $("#oneQtyRed").click(function(){
+        sessionStorage.setItem("demon", "demon1");
+        back();
+        });
+
+        $("#tenQtyRed").click(function(){
+            sessionStorage.setItem("demon", "demon10");
+            back()
+        });
+
+        $("#oneQtyYellow").click(function(){
+        sessionStorage.setItem("sunshine", "sunshine1");
+        back();
+        });
+        
+        $("#tenQtyYellow").click(function(){
+            sessionStorage.setItem("sunshine", "sunshine10");
+            back()
+        });
+
+        $("#oneQtyBlue").click(function(){
+        sessionStorage.setItem("icy", "icy1");
+        back();
+        });
+        
+        $("#tenQtyBlue").click(function(){
+            sessionStorage.setItem("icy", "icy10");
+            back()
+        });
+    });
 
     function photoChange(num){
         
@@ -99,59 +130,12 @@ var data = {
     }
 
     function back(){
-        if((qtynow = document.getElementById('quantity').value > 0) && (document.getElementById('quantity').value < 6)){
-            document.getElementById('amount').style.top = "-300px";
-            qtyChange();
-            console.log("continue");
-        }
-        else if(qtynow = document.getElementById('quantity').value === "0"){
-            document.getElementById('amount').style.top = "-300px";
+            document.getElementById('amount').style.top = "-360px";
             qtyChange();
         }
-        else if(document.getElementById('quantity').value > 5){
-            alert("We only sell 5 at a time to a customer due to limited stock");
-        
-        }
-        else{
-            alert("Please choose a positive number");
-            console.log("no");
-        }
-    }
 
     function qtyChange(){
-        var newValue = document.getElementById('quantity').value
-        if(display == 0){
-            let oldValue = sessionStorage.getItem("demon").match(/\d+$/g)[0];
-            oldValue = parseInt(oldValue, 10);
-            newValue = parseInt(newValue, 10);
-            console.log(newValue);
-            console.log(oldValue);
-            let value = oldValue + newValue;
-            data.demon.qty = value;
-            sessionStorage.setItem("demon", data.demon.name + data.demon.qty);
-        }
-        else if(display == 1){
-            let oldValue = sessionStorage.getItem("sunshine").match(/\d+$/g)[0];
-            oldValue = parseInt(oldValue, 10);
-            newValue = parseInt(newValue, 10);
-            console.log(newValue);
-            console.log(oldValue);
-            let value = oldValue + newValue;
-            data.sunshine.qty = value;
-            sessionStorage.setItem("sunshine", data.sunshine.name + data.sunshine.qty);
-        }
-        else if(display == 2){
-            let oldValue = sessionStorage.getItem("icy").match(/\d+$/g)[0];
-            oldValue = parseInt(oldValue, 10);
-            newValue = parseInt(newValue, 10);
-            console.log(newValue);
-            console.log(oldValue);
-            let value = oldValue + newValue;
-            data.icy.qty = value;
-            sessionStorage.setItem("icy", data.icy.name + data.icy.qty);
-        }
-        let qtyvalue = parseInt(data.demon.qty, 10) + parseInt(data.sunshine.qty, 10) + parseInt(data.icy.qty, 10);
+        let qtyvalue = parseInt(sessionStorage.getItem("demon").match(/\d+$/g)) + parseInt(sessionStorage.getItem("sunshine").match(/\d+$/g)) + parseInt(sessionStorage.getItem("icy").match(/\d+$/g));
         sessionStorage.setItem("qty", qtyvalue);
         cartAmount();
-
     }

@@ -1,3 +1,6 @@
+
+    var price = 69.69
+    var priceDeal = 420.69
 //set value for images    
     var image = {
         red: {
