@@ -8,8 +8,8 @@
     var icyName = sessionStorage.getItem("icy").match(/\D+/g)[0];
     var qty = sessionStorage.getItem("qty");
     var beanjuice = " BeanJuice"
-    var priceOne = 69.99
-    var priceDeal = 420.69
+    var priceOne = 12.99
+    var priceDeal = 99.99
     var dealAmountPerQuanity = 10
 
 //HTML loaded function

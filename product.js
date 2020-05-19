@@ -1,42 +1,46 @@
-var display = "";
-var image = {
-    red: {
-        one: "photo/product/red1.jpg",
-        two: "photo/product/red2.jpg",
-        three: "photo/product/red3.jpg",
-        four: "photo/product/red4.jpg",
-        five: "photo/product/red5.jpg"
-    },
-    yellow: {
-        one: "photo/product/yellow1.jpg",
-        two: "photo/product/yellow2.jpg",
-        three: "photo/product/yellow3.jpg",
-        four: "photo/product/yellow4.jpg",
-        five: "photo/product/yellow5.jpg"
-    },
-    blue: {
-        one: "photo/product/blue1.jpg",
-        two: "photo/product/blue2.jpg",
-        three: "photo/product/blue3.jpg",
-        four: "photo/product/blue4.jpg",
-        five: "photo/product/blue5.jpg"
-    }
+//Variables
+    var display = "";
 
-};
-var data = {
-    demon: {
-        name: "demon",
-        qty: sessionStorage.getItem("demon").match(/\d+$/g)
-    },
-    sunshine: {
-        name: "sunshine",
-        qty: sessionStorage.getItem("sunshine").match(/\d+$/g)
-    },
-    icy: {
-        name: "icy",
-        qty: sessionStorage.getItem("icy").match(/\d+$/g)
+//Images in Variables
+    var image = {
+        red: {
+            one: "photo/product/red1.jpg",
+            two: "photo/product/red2.jpg",
+            three: "photo/product/red3.jpg",
+            four: "photo/product/red4.jpg",
+            five: "photo/product/red5.jpg"
+        },
+        yellow: {
+            one: "photo/product/yellow1.jpg",
+            two: "photo/product/yellow2.jpg",
+            three: "photo/product/yellow3.jpg",
+            four: "photo/product/yellow4.jpg",
+            five: "photo/product/yellow5.jpg"
+        },
+        blue: {
+            one: "photo/product/blue1.jpg",
+            two: "photo/product/blue2.jpg",
+            three: "photo/product/blue3.jpg",
+            four: "photo/product/blue4.jpg",
+            five: "photo/product/blue5.jpg"
+        }
+    };
+
+//
+    var data = {
+        demon: {
+            name: "demon",
+            qty: sessionStorage.getItem("demon").match(/\d+$/g)
+        },
+        sunshine: {
+            name: "sunshine",
+            qty: sessionStorage.getItem("sunshine").match(/\d+$/g)
+        },
+        icy: {
+            name: "icy",
+            qty: sessionStorage.getItem("icy").match(/\d+$/g)
+        }
     }
-}
 
     qtyCartNum();
     $(document).ready(function(){
